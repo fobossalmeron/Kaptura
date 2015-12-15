@@ -1,0 +1,28 @@
+<section id="portafolio">
+	<h2>Casos de éxito</h2>
+
+{% for proyect in site.proyects reversed %}
+	<div class="proyect">
+		<div class="main_title">
+		    <h3>{{ proyect.es_title }}</h3>
+		    <p class="main_subtitle"> {{ proyect.es_subtitle }} </p>
+		</div>
+		<div class="main_video">
+		<img class="insert" src="{{site.baseurl}}images/portfolio/{{proyect.first_insert}}">
+		</div>
+		{{ proyect.content }}
+		<iframe class="video_insert" src="{{ proyect.video }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<div class="brief">
+			<h3>Brief</h3>
+			<p>{{ proyect.es_brief}}</p>
+		</div>
+		<img class="insert" src="{{site.baseurl}}images/portfolio/{{proyect.second_insert}}">
+		<div class="solution">
+			<h3>Solución</h3>
+			<p>{{ proyect.es_solution}}</p>
+		<img class="insert" src="{{site.baseurl}}images/portfolio/{{proyect.third_insert}}">
+		</div>
+	</div>
+{% endfor %}
+
+</section>
