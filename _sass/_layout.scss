@@ -101,6 +101,7 @@ $header-height: 60px;
 
         &:hover{
             background-color: $dirtywhite;
+            text-decoration:none;
         }
     }
 }
@@ -141,7 +142,7 @@ section{
     float:left;
     clear:both;
     width:100%;
-    padding-top: 5%;
+    padding-top: 10%;
 }
 
 h2{
@@ -174,7 +175,6 @@ $clacket-width: 1px;
     color: $white;
 
     h2{
-        border-bottom: $clacket-width $dirtyblack solid;
         margin-bottom: 0;
         color: $white;
         background-color: $black;
@@ -231,11 +231,12 @@ $clacket-width: 1px;
     }
 }
 
-.main_video{
+.main_image{
     width: 50%;
     border-left: $clacket-width $dirtyblack solid;
     border-top: $clacket-width $dirtyblack solid;
     box-sizing: border-box;
+    padding: 2%;
     height: 200px;
     float: left;
 }
@@ -245,6 +246,8 @@ $clacket-width: 1px;
 }
 .main_title{
     width: 50%;
+    padding:2%;
+    border-top: $clacket-width $dirtyblack solid;
     box-sizing: border-box;
     float:left;
 }
@@ -264,6 +267,54 @@ iframe{
     #player{
         background-color: $background-color !important;
     }
+}
+
+/**
+ * Acerca de nosotros
+ */
+
+#nosotros{
+    h2{
+        margin-bottom: 0;
+        color: $black;
+        text-align: center;
+        padding: 0 0 5% 0;
+        line-height: 1;
+        border-bottom: $clacket-width $dirtywhite solid;
+    }
+
+    p{
+        float: left;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 6% 20%;
+        text-align: center;
+    }
+
+    .members{
+    float:left;
+    box-sizing: border-box;
+    list-style: none;
+    width:100%;
+    margin:0;
+
+        li{
+            width: 1px / 4px * 100%;
+            float:left;
+            padding: 3%;
+            box-sizing: border-box;
+
+            p{
+                padding: 6% 0%;
+            }
+        }
+    }
+}
+
+.profilecard{
+    border-radius: 50%;
+    float:left;
+    padding:10%;
 }
 
 /**
@@ -296,7 +347,7 @@ footer{
     margin:0;
 
     li{
-        width: 1px / 6px * 100%;;
+        width: 1px / 6px * 100%;
         float:left;
     }
 }
