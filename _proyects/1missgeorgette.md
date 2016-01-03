@@ -8,7 +8,7 @@ en brief: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa
 es_solution: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis"
 en_solution: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis"
 video: "https://player.vimeo.com/video/147327791"
-first_insert: "missgeorgette2.png"
+first_insert: "missgeorgette_insert1.png"
 second_insert: "missgeorgette1.png"
 third_insert: "missgeorgette1.png"
 ---

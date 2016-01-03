@@ -1,22 +1,17 @@
-<div id="left"></div>
-<div id="right"></div>
-<div id="top"></div>
-<div id="bottom"></div>
-
 <header class="site-header">
+ 
+	<img class="headerlogo" src="{{ site.baseurl }}images/layout/logowhite.svg">
+  {% include menuicon.html %}
+  <nav class="site-nav">
+    <a class="page-link" href="#inicio">Inicio</a>
+    <a class="page-link" href="#portafolio">Casos de éxito</a>
+    <a class="page-link" href="#nosotros">Sobre nosotros</a>
+    <a class="page-link" href="#contacto">Contáctanos</a>
+  </nav>
 
-	<img class="headerlogo" src="{{ site.baseurl }}images/layout/eye.svg">
-
-	<div class="language">
-    	<a class="language-link" href="{{ site.baseurl }}"><b>Es</b></a>
-    	<a class="language-link" href="{{ site.baseurl }}en/">En</a>
-    </div>
-
-    <nav class="site-nav">
-      <a class="page-link" href="#inicio">Inicio</a>
-      <a class="page-link" href="#portafolio">Casos de éxito</a>
-      <a class="page-link" href="#nosotros">Sobre nosotros</a>
-      <a class="page-link" href="#contacto">Contáctanos</a>
-    </nav>
+  <div class="language">
+    <a class="language-link" href="{{ site.baseurl }}"><b>Español</b></a>
+    <a class="language-link" href="{{ site.baseurl }}en/">English</a>
+  </div>
 
 </header>

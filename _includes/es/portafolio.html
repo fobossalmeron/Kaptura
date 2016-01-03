@@ -16,11 +16,11 @@
 			<h3>Brief</h3>
 			<p>{{ proyect.es_brief}}</p>
 		</div>
-		<img class="insert" src="{{site.baseurl}}images/portfolio/{{proyect.second_insert}}">
+		<div class="display" style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.second_insert}})"></div>
 		<div class="solution">
 			<h3>Solución</h3>
 			<p>{{ proyect.es_solution}}</p>
-		<img class="insert" src="{{site.baseurl}}images/portfolio/{{proyect.third_insert}}">
+		<div class="display" style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert}})"></div>
 		</div>
 	</div>
 {% endfor %}

@@ -46,3 +46,146 @@ $(document).ready(function() {
   }
  
 });
+
+(function () {
+  'use strict';
+
+  var querySelector = document.querySelector.bind(document);
+
+  var allNav = querySelector('.site-header');
+  var menuIcon = querySelector('.menuicon');
+  var body = querySelector('body');
+  var html = querySelector('html');
+
+
+  function closeMenu() {
+    menuIcon.classList.remove('cross');
+    allNav.classList.remove('openmenu');
+  };
+
+  function toggleMenu(){
+    menuIcon.classList.toggle('cross');
+    allNav.classList.toggle('openmenu');
+//    body.classList.toggle('preventscroll');
+//    html.classList.toggle('preventscroll');
+  };
+
+  menuIcon.addEventListener('click', toggleMenu);
+
+  allNav.addEventListener('click', function (event) {
+    if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
+      closeMenu();
+    }
+  });
+})();
+
+
+//Maps
+function initialize() {
+  var kaptura  = new google.maps.LatLng(19.419696,-99.160785);
+  var kapturaOptions = {
+    zoom: 16,
+    center: kaptura,
+    scrollwheel: false
+  };
+  var mapaKaptura = new google.maps.Map(document.getElementById("mapa"), kapturaOptions);
+
+  mapaKaptura.set("styles", [
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#444444"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 45
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#46bcec"
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    }
+]);
+
+  var retailSpot_180ShopMarker = new google.maps.Marker({
+    position: kaptura,
+    map: mapaKaptura,
+    title:"Kaptura",
+    //icon: image
+  });
+
+//Define image y guarda en .png, widthxheight en medidas, origen el centro y anchor la punta que señala
+
+//  var image = {
+//      url: '/images/logo.svg', 
+//      size: new google.maps.Size(40,33),
+//      origin: new google.maps.Point(0,0),
+//      anchor: new google.maps.Point(0, 33)
+//  };
+};
+
+google.maps.event.addDomListener(window, 'load', initialize);
