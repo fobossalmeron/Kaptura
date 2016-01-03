@@ -140,12 +140,21 @@ $header-height: 60px;
     margin-top: 3%;
     padding-left:5%;
 
+    &::before{
+            border-bottom: 1px solid $dirtyblack;
+            content:" ";
+            width:200px;
+            height:1px;
+    }
+
     .page-link {
         color: $white;
         line-height: $base-line-height;
         font-family: 'Oswald', sans-serif;
         box-sizing: border-box;
         font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing:3px;
         font-size: 1.2em;
         padding: 10px;
         width: 100%;
@@ -171,7 +180,6 @@ $header-height: 60px;
     text-align: center;
     width: 95%;
     box-sizing: border-box;
-    border-top: 1px solid $dirtyblack;
     margin-top: 3%;
     padding-left:6%;
 
@@ -218,15 +226,74 @@ h2{
 #inicio{
     background-color: $white;
     color:$black;
+
+    .language{
+        a{
+            color:black;
+        }
+    }
 }
 
 .logopage{
-    width: 25%;
+    width: 30%;
+    height: 100%;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
     padding-top: 12%;
+    z-index: 2;
 } 
+
+@keyframes blink {
+  0% {
+    transform: translateX(-20%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+.desaparece{
+    @include transition(.4s, ease);
+    animation: blink 4s infinite;
+    stroke-width:25px;
+    transform-origin: 50% 50%;
+    stroke-opacity:0;
+    stroke:$black;
+    &:hover{
+        animation: none;
+        transform:scale(1.5) !important;
+    }
+}
+
+@keyframes miniblink {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.unpocodesaparece{
+    @include transition(.4s, ease);
+    animation: miniblink 4s infinite;
+}
+
+#backvideo{
+    min-height: 1000px;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-150px);
+}
 
 /**
  * Portafolio
