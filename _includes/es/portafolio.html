@@ -10,17 +10,31 @@
 		<div class="main_image">
 			<img class="insert" src="{{site.baseurl}}images/portfolio/{{proyect.first_insert}}">
 		</div>
+		<div class="columned">
 		{{ proyect.content }}
+		</div>
 		<iframe class="video_insert" src="{{ proyect.video }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		<div class="brief">
 			<h3>Brief</h3>
 			<p>{{ proyect.es_brief}}</p>
 		</div>
-		<div class="display" style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.second_insert}})"></div>
 		<div class="solution">
 			<h3>Solución</h3>
 			<p>{{ proyect.es_solution}}</p>
-		<div class="display" style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert}})"></div>
+		</div>
+		<div class="display_container">
+			<div class="display">
+				<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.second_insert}})"></span>
+			</div>
+			<div class="display">
+				<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert}})"></span>
+			</div>
+			<div class="display">
+				<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.second_insert}})"></span>
+			</div>
+			<div class="display">
+				<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert}})"></span>
+			</div>
 		</div>
 	</div>
 {% endfor %}
