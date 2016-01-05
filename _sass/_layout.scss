@@ -53,6 +53,15 @@
     }
 }
 
+.email{
+    &:hover{
+        path{
+            fill:#dd493d; 
+            stroke:#dd493d;
+        }            
+    }  
+}
+
 .social_icon_black{
     svg{
         path{
@@ -80,6 +89,7 @@
 /***
  * Under construction
  */
+
 .underconstruction{
     width: 180px;
     display: block;
@@ -109,7 +119,7 @@
 /**
  * Site header
  */
-$header-height: 60px;
+
 
 .site-header {
     height: 100%;
@@ -143,16 +153,8 @@ $header-height: 60px;
 }
 
 .openmenu{
-    transform:translateX(0%);
+    transform:translateX(0%) !important;
 }
-/*
-.crossed1{
-    transform: skewX(7deg) scaleY(1.7) translateX(-6px);
-}
-.crossed2{
-    transform: skewX(-10deg) scaleY(1.7) translateX(14px) translateY(-50px);
-}
-*/
 
 .menuicon #firstline{
     transform: skewX(0deg) scaleY(1) translateX(0px);
@@ -163,11 +165,11 @@ $header-height: 60px;
 }
 //
 .menuicon.cross #firstline{
-    transform: skewX(12deg) scaleY(1.75) translateX(-15px) translateY(-1px);
+    transform: skewX(8deg) scaleY(1.5) translateX(-6px) translateY(7px);
 }
 
-.menuicon.cross #secondline{
-    transform: skewX(-10deg) scaleY(1.7) translateX(14px) translateY(-50px);
+.menuicon.cross #secondline {
+    transform: skewX(-10deg) scaleY(1.5) translateX(20px) translateY(-43px);
 }
 
 .preventscroll{
@@ -176,12 +178,16 @@ $header-height: 60px;
 
 .menuicon{
     float: right;
-    width: 50px;
+    width: 25px;
     top: 50%;
     position: relative;
     transform: translateY(-50%);
     background-color: $black;
-    padding-left: 15px;
+    padding-right: 1%;
+}
+
+.menuicon.cross{
+    padding-right:3%;
 }
 
 .menu-holder{
@@ -275,10 +281,11 @@ $header-height: 60px;
  * Site Main
  */ 
 main{
-    width: 85%;
-    float: left;
-    height: 100%;
-    overflow: scroll;
+    width: 80%;
+    max-width: 970px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
 }
 /**
  * Sections
@@ -418,7 +425,7 @@ $clacket-width: 1px;
         float: left;
         width: 100%;
         margin-bottom: 0;
-        padding: 10% 20%;
+        padding: 10% 12%;
         text-align: center;
     }
     .main_title{
@@ -434,13 +441,6 @@ $clacket-width: 1px;
     float:left;
     width:50%;
     box-sizing: border-box;
-}
-
-.brief{
-    padding-left: 10%;
-}
-.solution{
-    padding-right:10%;
 }
 
 .columned{
@@ -461,7 +461,7 @@ $clacket-width: 1px;
 .display_container{
     float:left;
     box-sizing: border-box;
-    padding: 10% 10% 25% 10%;
+    padding: 10% 0 25% 0;
     width:100%;
 }
 
@@ -482,6 +482,7 @@ $clacket-width: 1px;
     min-height: 350px;
     background-attachment: fixed;
     position: relative;
+    background-size: cover;
     float: left;
     }
 }
@@ -496,7 +497,7 @@ $clacket-width: 1px;
 
     p{
         padding: 2% !important;
-        width: 360px !important; 
+        max-width: 360px;
         clear: both;
         left: 50%;
         transform: translateX(-50%);
@@ -507,28 +508,26 @@ $clacket-width: 1px;
 }
 
 .main_image{
-    width: 40%;
+    width: 50%;
     border-left: $clacket-width $dirtyblack solid;
     border-top: $clacket-width $dirtyblack solid;
     box-sizing: border-box;
     padding: 2%;
     height: 200px;
     float: left;
-    margin-right: 10%;
 }
 
 .video_insert{
     min-height: 565px;
     box-sizing: border-box;
-    padding: 2% 10% 10% 10%;
+    padding: 2% 0 10% 0;
 }
 .main_title{
-    width: 40%;
+    width: 50%;
     padding:2%;
     border-top: $clacket-width $dirtyblack solid;
     box-sizing: border-box;
     float:left;
-    margin-left: 10%;
 }
 
 .insert{
@@ -557,8 +556,8 @@ iframe{
     padding-bottom:0px;
     h2{
         color: $black;
-        border-bottom: $clacket-width $dirtywhite solid;
         font-weight: 400;
+        padding: 15% 0;
     }
 
     h3{
@@ -566,7 +565,7 @@ iframe{
     font-size: 25px;
     font-weight: 400;
     width: 100%;
-    padding: 0 25%;
+    padding: 0 21%;
     box-sizing: border-box;
     }
     &::before{
@@ -583,9 +582,12 @@ iframe{
     p{
         float: left;
         width: 100%;
+        box-sizing: border-box;
+        border-top: $clacket-width $dirtywhite solid;
         margin-bottom: 0;
-        padding: 6% 20%;
+        padding: 5% 30%;
         text-align: center;
+
     }
 
     .social_blocklist{
@@ -595,26 +597,30 @@ iframe{
     .members{
     float:left;
     box-sizing: border-box;
-    padding-bottom: 15%;
+    padding: 0 0 15% 0;
     list-style: none;
     width:100%;
     margin:0;
 
         li{
-            width: 1px / 3px * 100%;
+            width: 1px / 3.5px * 100%;
             float:left;
-            padding: 5%;
             box-sizing: border-box;
+            margin-right: 5%;
+
+            &:nth-last-child(1){
+                margin-right:0px;
+            }
 
             &:hover{
-                img{
+                .colorize{
                     -webkit-filter:none;
                     filter:none;
-                    transform: scale(1.05);
+                    transform: skewY(15deg) scale(1.3);
                 }
             }
 
-            img{
+            .colorize{
                 -webkit-filter: grayscale(100%);
                 filter: grayscale(100%);
                 @include transition(.4s, ease);
@@ -628,9 +634,17 @@ iframe{
 }
 
 .profilecard{
-    border-radius: 50%;
-    float:left;
-    padding:10%;
+    float: left;
+    width: 80%;
+    margin: 30% 10%;
+    box-sizing: border-box;
+    max-height: 300px;
+
+    span{
+        background-size:cover;
+        background-attachment: initial;
+        background-position: center center;
+    }
 }
 
 
@@ -646,7 +660,7 @@ iframe{
     &::before{
         display: block;
         content: " ";
-        background-color: $black;
+        background-color: $white;
         width: 230%;
         position: absolute;
         top: 0px;
@@ -657,6 +671,7 @@ iframe{
     h2{
         color: $white;
         border-bottom: $clacket-width $dirtyblack solid;
+        width: 100%;
     } 
 
     p a{
@@ -677,13 +692,22 @@ iframe{
     }
 
     .social_blocklist{
-        padding-right: 50%;
+        padding-right: 60%;
+        padding-bottom: 2%;
     }
 
     .display{
         min-height: 300px;
     }
 } 
+
+#clientcontact{
+    padding-left: 0px !important;
+}
+
+#freelancercontact{
+    padding-right: 0px !important;
+}
 
 form{
     float: left;
@@ -806,12 +830,12 @@ footer{
 }
 
 .footer-section{
-    width:100%;
+    width: 100%;
     float:left;
     box-sizing: border-box;
     min-height: 100px;
     border-bottom: 1px solid $dirtywhite;
-    padding: 5%;
+    padding: 5% 0;
     text-align: center;
 }
 
@@ -826,6 +850,10 @@ footer{
         width: 1px / 5px * 100%;
         float:left;
     }
+}
+
+.empresas{
+    padding:5%;
 }
 
 .footer-contact{
@@ -856,44 +884,6 @@ footer{
     clear: both;
 }
 
-.social{
-    float: left;
-    width: 35px;
-    height: 35px;
-    background-size: 100px;
-}
-
-.social-block{
-    position: relative;
-    display: block;
-    float: left;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.youtube-black{
-    background-position: -62px 33px;
-}
-
-.youtube-white{
-    background-position: -128px 2px;
-}
-
-.facebook-black{
-    background-position: 2px 33px;
-}
-
-.facebook-white {
-    background-position: 2px 1px;
-}
-
-.instagram-black{
-    background-position: -28px 33px;
-}
-
-.instagram-white {
-    background-position: -51px 4px;
-}
 /**
  * Page content
  */
@@ -923,72 +913,138 @@ footer{
     font-size: 24px;
 }
 
+@include media-query($tablet){
 
+    #contacto .social_blocklist {
+    padding-right: 30%;
+    }
 
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
+    body{
+        padding-left: 7%;
+    }
 
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
+    .site-header{
+        transform: translateX(-93%);
+    }
 
-    @include media-query($on-laptop) {
-        font-size: 36px;
+    h2{
+        padding-top:25%;
+    }
+
+    .logopage{
+        width: 40%;
+    }
+
+    main{
+        width:90%;
+    }
+    #portafolio p{
+        padding: 10% 0;
+    }
+    #nosotros h3{
+        padding: 0;
+    }
+
+    .footer-contact li{
+        width: 100%;
+        padding: 2% 0;
+    }
+
+    .display span{
+        min-height: 250px;
     }
 }
 
-.post-content {
-    margin-bottom: $spacing-unit;
+@include media-query($mobile){
+    #contacto .social_blocklist {
+    padding-right: 0%;
+    }
+
+    .site-header{
+        transform: translateX(-90%);
+    }
+
+    #contacto h2{
+        font-size: 35px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    body {
+    padding-left: 10%;
+    }
 
     h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
+    padding-top: 40%;
     }
 
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
+    #freelancercontract{
+        padding-bottom: 30% !important;
     }
 
-    h4 {
-        font-size: 20px;
+    .display_container{
+        padding: 10% 0 55% 0;
+    }
+    .logopage{
+        width: 60%;
+    }
+    .main_title{
+        width:100%;
+    }
+    .main_image{
+        width:100%;
+        border:0;
+    }
 
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
+    #portafolio .display{
+        width:31%;
+    }
+
+    .brief, .solution{
+        width:100%;
+    }
+    .columned p{
+        -webkit-column-count:1;
+        padding: 5% 15% !important;
+    }
+
+    #nosotros p{
+        padding: 5% 15% !important;
+    }
+
+    #nosotros .members li{
+    width: 200px;
+    clear: both;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    }
+
+    #contacto section{
+        width:100%;
+        padding: 5% 5% 25% 5% !important;
+    }
+
+    .pastclients {
+        li{
+            width: 1px / 2px * 100%;
+
+                img{
+                    width:100%;
+                    padding:10%;
+                }
+                &:nth-child(3n+0){
+                    clear:both;
+                }
+            }
+
     }
 }
 
-@include media-query($on-palm){
-    .headerlogo{
-        float: left;
-        left: 50%;
-        transform: translateX(-50%);
-        clear: both;
-        position: relative;
-        box-sizing: border-box;
+@include media-query($mini-mobile){
+    .logopage{
+        width:90%;
     }
-    .site-nav{
-        clear:both;
-        width:100%;
-    }
-    a.page-link{
-        padding: 0px 3.59% 2% 2.5% !important;
-        font-size: 1.26em !important;
-
-        &:nth-last-child(1){
-            border-right:0px solid;
-        }
+    .display span {
+        min-height: 200px;
     }
 }
