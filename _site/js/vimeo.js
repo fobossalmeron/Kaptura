@@ -1,0 +1,1 @@
+$(".video-wrapper").css("background-color:white");
