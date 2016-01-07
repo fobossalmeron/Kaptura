@@ -609,7 +609,7 @@ iframe{
     font-size: 25px;
     font-weight: 400;
     width: 100%;
-    padding: 0 21%;
+ //   padding: 0 21%;
     box-sizing: border-box;
     }
     &::before{
@@ -647,7 +647,7 @@ iframe{
     margin:0;
 
         li{
-            width: 1px / 3.5px * 100%;
+            width: 1px / 4.8px * 100%;
             float:left;
             box-sizing: border-box;
             margin-right: 5%;
@@ -999,6 +999,18 @@ footer{
 
     .display span{
         min-height: 250px;
+    }
+}
+
+@include media-query($mini-tablet){
+   #nosotros .members{
+        li{
+            width: 1px / 2.9px * 100%;
+
+            &:nth-child(2n+0){
+                margin-right:0px;
+            } 
+        }
     }
 }
 
