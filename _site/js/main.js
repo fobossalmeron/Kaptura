@@ -82,7 +82,7 @@ $(document).ready(function() {
 
 //Maps
 function initialize() {
-  var kaptura  = new google.maps.LatLng(19.419696,-99.160785);
+  var kaptura  = new google.maps.LatLng(19.352037, -99.151034);
   var kapturaOptions = {
     zoom: 16,
     center: kaptura,
@@ -171,21 +171,21 @@ function initialize() {
     }
 ]);
 
+//Define image y guarda en .png, widthxheight en medidas, origen el centro y anchor la punta que señala
+
+  var image = {
+      url: '/images/layout/eyemap.svg', 
+      size: new google.maps.Size(50,50),
+      origin: new google.maps.Point(0,0),
+      anchor: new google.maps.Point(30,70)
+  };
+
   var retailSpot_180ShopMarker = new google.maps.Marker({
     position: kaptura,
     map: mapaKaptura,
     title:"Kaptura",
-    //icon: image
+    icon: image
   });
-
-//Define image y guarda en .png, widthxheight en medidas, origen el centro y anchor la punta que señala
-
-//  var image = {
-//      url: '/images/logo.svg', 
-//      size: new google.maps.Size(40,33),
-//      origin: new google.maps.Point(0,0),
-//      anchor: new google.maps.Point(0, 33)
-//  };
 };
 
 google.maps.event.addDomListener(window, 'load', initialize);

@@ -1,6 +1,6 @@
 <section id="portafolio">
   <main>
-	<h2>Casos de éxito</h2>
+	<h2>Estudios de caso</h2>
 
 	{% for proyect in site.proyects reversed %}
 		<div class="proyect">
@@ -9,12 +9,26 @@
 			    <p>{{ proyect.es_subtitle }}</p>
 			</div>
 			<div class="main_image">
-				<img class="insert" src="{{site.baseurl}}images/portfolio/{{proyect.first_insert}}">
+				<img class="insert" src="{{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.logo}}">
 			</div>
+			<iframe class="video_insert" src="{{ proyect.video }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			<div class="columned">
 			{{ proyect.content }}
 			</div>
-			<iframe class="video_insert" src="{{ proyect.video }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<div class="display_container single_line">
+				<div class="display">
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_1}})"></span>
+				</div>
+				<div class="display">
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_1}})"></span>
+				</div>
+				<div class="display">
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_1}})"></span>
+				</div>
+				<div class="display">
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_1}})"></span>
+				</div>
+			</div>
 			<div class="brief">
 				<h3>Brief</h3>
 				<p>{{ proyect.es_brief}}</p>
@@ -25,28 +39,28 @@
 			</div>
 			<div class="display_container">
 				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert_}})"></span>
+					<span></span>
 				</div>
 				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert}})"></span>
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_2}})"></span>
 				</div>
 				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert}})"></span>
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_2}})"></span>
 				</div>
 				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert}})"></span>
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_2}})"></span>
 				</div>
 				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.second_insert}})"></span>
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_3}})"></span>
 				</div>
 				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.second_insert}})"></span>
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_3}})"></span>
 				</div>
 				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert}})"></span>
+					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.id}}/{{proyect.display_3}})"></span>
 				</div>
 				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.third_insert}})"></span>
+					<span></span>
 				</div>
 			</div>
 		</div>

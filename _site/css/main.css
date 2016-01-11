@@ -545,6 +545,9 @@ h2 {
 .proyect {
   float: left; }
 
+.single_line {
+  padding-bottom: 15% !important; }
+
 .display_container {
   float: left;
   box-sizing: border-box;
@@ -594,9 +597,9 @@ h2 {
   float: left; }
 
 .video_insert {
-  min-height: 565px;
+  min-height: 605px;
   box-sizing: border-box;
-  padding: 2% 0 10% 0; }
+  padding: 11% 0 8% 0; }
 
 .main_title {
   width: 50%;
@@ -605,7 +608,8 @@ h2 {
   box-sizing: border-box;
   float: left; }
 
-.insert:nth-last-child(1) {
+.insert {
+  width: 100%;
   padding-bottom: 15%; }
 
 iframe {

@@ -502,6 +502,10 @@ $clacket-width: 1px;
     float:left;
 }
 
+.single_line{
+    padding-bottom: 15% !important;
+}
+
 .display_container{
     float:left;
     box-sizing: border-box;
@@ -562,9 +566,9 @@ $clacket-width: 1px;
 }
 
 .video_insert{
-    min-height: 565px;
+    min-height: 605px;
     box-sizing: border-box;
-    padding: 2% 0 10% 0;
+    padding: 11% 0 8% 0;
 }
 .main_title{
     width: 50%;
@@ -575,10 +579,10 @@ $clacket-width: 1px;
 }
 
 .insert{
-    &:nth-last-child(1){
+    width:100%;
         padding-bottom: 15%;
-    }
 }
+
 iframe{
     width:100%;
     height:100%;
