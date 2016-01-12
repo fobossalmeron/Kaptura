@@ -9,7 +9,7 @@
     box-sizing: border-box;
     float: left;
     left: 50%;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
 
     span{
         float:left;
@@ -25,7 +25,7 @@
     @include transition(.2s, ease);
 
     &:hover {
-        transform: scale(1.1);
+        @include transform(scale(1.1));
     }
 }
 
@@ -104,13 +104,13 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
 
     .logopage{
         width: 100%;
         float: left;
         clear: both;
-        transform: none;
+        @include transform(none);
         left: 0;
         padding: 2% 17% 5% 17%;
         box-sizing: border-box;
@@ -139,7 +139,7 @@
     display: block;
     height: 250px;
     box-sizing: border-box;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
     left: 50%;
     position: absolute;
 }
@@ -171,7 +171,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    transform: translateX(-94.9%);
+    @include transform(translateX(-94.9%));
     z-index: 3;
     box-sizing: border-box;
     background-color: $black;
@@ -197,23 +197,23 @@
 }
 
 .openmenu{
-    transform:translateX(0%) !important;
+    @include transform(translateX(0%) !important);
 }
 
 .menuicon #firstline{
-    transform: skewX(0deg) scaleY(1) translateX(0px);
+    @include transform(skewX(0deg) scaleY(1) translateX(0px));
 }
 
 .menuicon #secondline{
-    transform: skewX(0deg) scaleY(1) translateX(0px) translateY(0px);
+    @include transform(skewX(0deg) scaleY(1) translateX(0px) translateY(0px));
 }
 //
 .menuicon.cross #firstline{
-    transform: skewX(8deg) scaleY(1.5) translateX(-6px) translateY(7px);
+    @include transform(skewX(8deg) scaleY(1.5) translateX(-6px) translateY(7px));
 }
 
 .menuicon.cross #secondline {
-    transform: skewX(-10deg) scaleY(1.5) translateX(20px) translateY(-43px);
+    @include transform(skewX(-10deg) scaleY(1.5) translateX(20px) translateY(-43px));
 }
 
 .preventscroll{
@@ -222,16 +222,16 @@
 
 .menuicon{
     float: right;
-    width: 25px;
+    width: 50px;
+    height: 100px;
     top: 50%;
     position: relative;
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
     background-color: $black;
-    padding-right: 1%;
 }
 
 .menuicon.cross{
-    padding-right:3%;
+    padding-right:2%;
 }
 
 .menu-holder{
@@ -254,7 +254,7 @@
 .headerlogo{
     float: left;
     left: 50%;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
     clear: both;
     position: relative;
     box-sizing: border-box;
@@ -264,10 +264,10 @@
 .site-nav {
     float: left;
     box-sizing: border-box;
-    width: 95%;
+    width: 90%;
     text-align: center;
     margin-top: 3%;
-    padding-left:5%;
+    padding-left:10%;
 
     &::before{
             border-bottom: 1px solid $dirtyblack;
@@ -335,7 +335,6 @@ main{
  * Sections
  */
 section{
-    min-height: 100%;
     float:left;
     clear:both;
     width:100%;
@@ -358,6 +357,8 @@ h2{
 #inicio{
     background-color: $white;
     color:$black;
+    height:100%;
+    max-height: 86%;
 
     .language{
         a{
@@ -368,9 +369,9 @@ h2{
 
 .logopage{
     width: 30%;
-    height: 100%;
+    height: 60%;
     left: 50%;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
     position: relative;
     padding-top: 8%;
     z-index: 2;
@@ -378,38 +379,53 @@ h2{
 
 @keyframes blink {
   0% {
-    transform: translateX(-20%);
+    @include transform(translateX(-20%));
   }
   50% {
-    transform: translateX(20%);
+    @include transform(translateX(20%));
   }
   100% {
-    transform: translateX(-20%);
+    @include transform(translateX(-20%));
+  }
+}
+
+@-moz-keyframes moz-blink {
+  0% {
+    @include transform(translateX(-5%));
+  }
+  50% {
+    @include transform(translateX(5%));
+  }
+  100% {
+    @include transform(translateX(-5%));
   }
 }
 
 .move_letter{
     @include transition(.4s, ease);
     animation: blink 4s infinite;
+    -moz-animation: moz-blink 4s infinite;
     stroke-width:25px;
     transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
     stroke-opacity:0;
     stroke:$black;
     &:hover{
         animation: none;
         transform:scale(1.5) !important;
+        -moz-transform:scale(1.1) !important;
     }
 }
 
 @keyframes miniblink {
   0% {
-    transform: translateX(-5%);
+    @include transform(translateX(-5%));
   }
   50% {
-    transform: translateX(0%);
+    @include transform(translateX(0%));
   }
   100% {
-    transform: translateX(-5%);
+    @include transform(translateX(-5%));
   }
 }
 
@@ -425,7 +441,7 @@ h2{
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-150px);
+    @include transform(translateY(-150px));
 }
 
 /**
@@ -439,6 +455,7 @@ $clacket-width: 1px;
     color: $white;
     position:relative;
     padding-bottom: 0;
+    min-height: 100%;
 
     &::before{
         display: block;
@@ -448,7 +465,7 @@ $clacket-width: 1px;
         position: absolute;
         top: 0;
         height: 100px;
-        transform: rotate(4deg) translateX(-200px);
+        @include transform(rotate(4deg) translateX(-200px));
     }
 
     h2{
@@ -489,10 +506,10 @@ $clacket-width: 1px;
 
 .columned{
     p{
-            -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
-        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
     -moz-column-gap: 40px; /* Firefox */
     column-gap: 40px;
     }
@@ -519,12 +536,12 @@ $clacket-width: 1px;
     box-sizing: border-box;
     background-attachment: fixed;
     float: left;
-    transform: skewY(-15deg);
+    @include transform(skewY(-15deg));
     overflow: hidden;
     position: relative;
 
     span{
-    transform: skewY(15deg) scale(1.2);
+    @include transform(skewY(15deg) scale(1.2));
     width: 100%;
     box-sizing: border-box;
     min-height: 350px;
@@ -539,7 +556,7 @@ $clacket-width: 1px;
 
     h3{
         left:50%;
-        transform:translateX(-50%);
+        @include transform(translateX(-50%));
         position:relative;
     }
 
@@ -548,7 +565,7 @@ $clacket-width: 1px;
         max-width: 360px;
         clear: both;
         left: 50%;
-        transform: translateX(-50%);
+        @include transform(translateX(-50%));
         position: relative;
         margin-bottom: 8% !important;
         text-align: center;
@@ -610,11 +627,10 @@ iframe{
 
     h3{
         text-align: center;
-    font-size: 25px;
-    font-weight: 400;
-    width: 100%;
- //   padding: 0 21%;
-    box-sizing: border-box;
+        font-size: 25px;
+        font-weight: 400;
+        width: 100%;
+        box-sizing: border-box;
     }
     &::before{
         display: block;
@@ -624,7 +640,7 @@ iframe{
         position: absolute;
         top: -100px;
         height: 100px;
-        transform: rotate(-4deg) translateX(-200px);
+        @include transform(rotate(-4deg) translateX(-200px));
     }
 
     p{
@@ -643,12 +659,12 @@ iframe{
     }
 
     .members{
-    float:left;
-    box-sizing: border-box;
-    padding: 0 0 15% 0;
-    list-style: none;
-    width:100%;
-    margin:0;
+        float:left;
+        box-sizing: border-box;
+        padding: 0 0 15% 0;
+        list-style: none;
+        width:100%;
+        margin:0;
 
         li{
             width: 1px / 4.8px * 100%;
@@ -664,7 +680,7 @@ iframe{
                 .colorize{
                     -webkit-filter:none;
                     filter:none;
-                    transform: skewY(15deg) scale(1.3);
+                    @include transform(skewY(15deg) scale(1.3));
                 }
             }
 
@@ -713,7 +729,7 @@ iframe{
         position: absolute;
         top: 0px;
         height: 100px;
-        transform: rotate(4deg) translateX(-200px);
+        @include transform(rotate(4deg) translateX(-200px));
     }
 
     h2{
@@ -872,7 +888,7 @@ footer{
         position: absolute;
         top: -100px;
         height: 100px;
-        transform: rotate(-4deg) translateX(-200px);
+        @include transform(rotate(-4deg) translateX(-200px));
     }
 
     .social_blocklist{
@@ -928,7 +944,7 @@ footer{
 .footerlogo{
     width: 100px;
     left: 50%;
-    transform: translateX(-50%);
+    @include transform(translateX(-50%));
     float: left;
     position: relative;
     padding-top: 10%;
@@ -975,7 +991,7 @@ footer{
     }
 
     .site-header{
-        transform: translateX(-93%);
+        @include transform(translateX(-93%));
     }
 
     h2{
@@ -1010,6 +1026,7 @@ footer{
    #nosotros .members{
         li{
             width: 1px / 2.9px * 100%;
+            margin-left: 8%;
 
             &:nth-child(2n+0){
                 margin-right:0px;
@@ -1024,7 +1041,7 @@ footer{
     }
 
     .site-header{
-        transform: translateX(-90%);
+        @include transform(translateX(-90%));
     }
 
     #contacto h2{
@@ -1033,11 +1050,11 @@ footer{
         padding-right: 0;
     }
     body {
-    padding-left: 10%;
+        padding-left: 10%;
     }
 
     h2 {
-    padding-top: 40%;
+       padding-top: 40%;
     }
 
     #freelancercontract{
@@ -1059,7 +1076,7 @@ footer{
     }
 
     #portafolio .display{
-        width:31%;
+        width:48%;
     }
 
     .brief, .solution{
@@ -1067,6 +1084,7 @@ footer{
     }
     .columned p{
         -webkit-column-count:1;
+        column-count:1;
         padding: 5% 15% !important;
     }
 
@@ -1075,11 +1093,12 @@ footer{
     }
 
     #nosotros .members li{
-    width: 200px;
-    clear: both;
-    left: 50%;
-    position: relative;
-    transform: translateX(-50%);
+        width: 200px;
+        clear: both;
+        left: 50%;
+        position: relative;
+        @include transform(translateX(-50%));
+        margin-left:0px;
     }
 
     #contacto section{
