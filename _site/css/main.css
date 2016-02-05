@@ -1169,6 +1169,9 @@ footer {
   #contacto .social_blocklist {
     padding-right: 0%; }
 
+  .display span {
+    background-attachment: initial; }
+
   .site-header {
     -webkit-transform: translateX(-90%);
     -moz-transform: translateX(-90%);
