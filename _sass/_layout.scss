@@ -268,6 +268,7 @@
     text-align: center;
     margin-top: 3%;
     padding-left:10%;
+    clear:both;
 
     &::before{
             border-bottom: 1px solid $dirtyblack;
@@ -339,6 +340,7 @@ section{
     clear:both;
     width:100%;
     padding-bottom: 10%;
+    overflow-x: hidden;
 }
 
 h2{
@@ -490,7 +492,7 @@ $clacket-width: 1px;
     padding-bottom: 0;
     min-height: 100%;
 
-    &::before{
+/*    &::before{
         display: block;
         content: " ";
         background-color: $white;
@@ -499,7 +501,7 @@ $clacket-width: 1px;
         top: 0;
         height: 100px;
         @include transform(rotate(4deg) translateX(-200px));
-    }
+    }*/
 
     h2{
         color: $white;
@@ -529,6 +531,30 @@ $clacket-width: 1px;
             width:100%;
         }
     }
+}
+
+
+.diagonalpos{
+    display: block;
+    content: " ";
+    background-color: $white;
+    width: 230%;
+    position: absolute;
+    top: 0;
+    height: 100px;
+    @include transform(rotate(4deg) translateX(-200px));
+}
+
+.diagonalcont{
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    min-height: 110px;
+    position: relative;
+}
+
+.black{
+    background-color: $black;
 }
 
 .brief,.solution{
@@ -613,6 +639,7 @@ $clacket-width: 1px;
     padding: 2%;
     height: 200px;
     float: left;
+    height:auto;
 }
 
 .video_insert{
@@ -655,7 +682,6 @@ iframe{
     h2{
         color: $black;
         font-weight: 400;
-        padding: 15% 0;
     }
 
     h3{
@@ -665,7 +691,7 @@ iframe{
         width: 100%;
         box-sizing: border-box;
     }
-    &::before{
+/*    &::before{
         display: block;
         content: " ";
         background-color: $white;
@@ -674,7 +700,7 @@ iframe{
         top: -100px;
         height: 100px;
         @include transform(rotate(-4deg) translateX(-200px));
-    }
+    }*/
 
     p{
         float: left;
@@ -754,7 +780,7 @@ iframe{
     color: $white;
     position:relative;
 
-    &::before{
+/*    &::before{
         display: block;
         content: " ";
         background-color: $white;
@@ -763,7 +789,7 @@ iframe{
         top: 0px;
         height: 100px;
         @include transform(rotate(4deg) translateX(-200px));
-    }
+    }*/
 
     h2{
         color: $white;
@@ -913,7 +939,7 @@ footer{
     color:$black;
     position:relative;
 
-    &::before{
+  /*  &::before{
         display: block;
         content: " ";
         background-color: $white;
@@ -922,7 +948,7 @@ footer{
         top: -100px;
         height: 100px;
         @include transform(rotate(-4deg) translateX(-200px));
-    }
+    }*/
 
     .social_blocklist{
         max-width: 150px;
@@ -1078,7 +1104,7 @@ footer{
     }
 
     #contacto h2{
-        font-size: 35px;
+        font-size: 1.8em;
         padding-left: 0;
         padding-right: 0;
     }
@@ -1087,7 +1113,8 @@ footer{
     }
 
     h2 {
-       padding-top: 40%;
+        padding: 40% 0 20% 0;
+        font-size: 2em;
     }
 
     #freelancercontract{
@@ -1161,5 +1188,8 @@ footer{
     }
     .display span {
         min-height: 200px;
+    }
+    .insert {
+        padding-bottom: 0%;
     }
 }

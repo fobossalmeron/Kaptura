@@ -400,7 +400,8 @@ b {
   width: 90%;
   text-align: center;
   margin-top: 3%;
-  padding-left: 10%; }
+  padding-left: 10%;
+  clear: both; }
   .site-nav::before {
     border-bottom: 1px solid #262626;
     content: " ";
@@ -463,7 +464,8 @@ section {
   float: left;
   clear: both;
   width: 100%;
-  padding-bottom: 10%; }
+  padding-bottom: 10%;
+  overflow-x: hidden; }
 
 h2 {
   width: 100%;
@@ -640,20 +642,17 @@ h2 {
   color: #FCFCFC;
   position: relative;
   padding-bottom: 0;
-  min-height: 100%; }
-  #portafolio::before {
-    display: block;
-    content: " ";
-    background-color: #FCFCFC;
-    width: 230%;
-    position: absolute;
-    top: 0;
-    height: 100px;
-    -webkit-transform: rotate(4deg) translateX(-200px);
-    -moz-transform: rotate(4deg) translateX(-200px);
-    -ms-transform: rotate(4deg) translateX(-200px);
-    -o-transform: rotate(4deg) translateX(-200px);
-    transform: rotate(4deg) translateX(-200px); }
+  min-height: 100%;
+  /*    &::before{
+          display: block;
+          content: " ";
+          background-color: $white;
+          width: 230%;
+          position: absolute;
+          top: 0;
+          height: 100px;
+          @include transform(rotate(4deg) translateX(-200px));
+      }*/ }
   #portafolio h2 {
     color: #FCFCFC; }
   #portafolio h3 {
@@ -674,6 +673,30 @@ h2 {
     padding: 5%;
     font-size: 1.3em;
     width: 100%; }
+
+.diagonalpos {
+  display: block;
+  content: " ";
+  background-color: #FCFCFC;
+  width: 230%;
+  position: absolute;
+  top: 0;
+  height: 100px;
+  -webkit-transform: rotate(4deg) translateX(-200px);
+  -moz-transform: rotate(4deg) translateX(-200px);
+  -ms-transform: rotate(4deg) translateX(-200px);
+  -o-transform: rotate(4deg) translateX(-200px);
+  transform: rotate(4deg) translateX(-200px); }
+
+.diagonalcont {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  min-height: 110px;
+  position: relative; }
+
+.black {
+  background-color: #141414; }
 
 .brief, .solution {
   float: left;
@@ -760,7 +783,8 @@ h2 {
   box-sizing: border-box;
   padding: 2%;
   height: 200px;
-  float: left; }
+  float: left;
+  height: auto; }
 
 .video_insert {
   min-height: 605px;
@@ -791,30 +815,26 @@ iframe {
  */
 #nosotros {
   position: relative;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  /*    &::before{
+          display: block;
+          content: " ";
+          background-color: $white;
+          width: 230%;
+          position: absolute;
+          top: -100px;
+          height: 100px;
+          @include transform(rotate(-4deg) translateX(-200px));
+      }*/ }
   #nosotros h2 {
     color: #141414;
-    font-weight: 400;
-    padding: 15% 0; }
+    font-weight: 400; }
   #nosotros h3 {
     text-align: center;
     font-size: 25px;
     font-weight: 400;
     width: 100%;
     box-sizing: border-box; }
-  #nosotros::before {
-    display: block;
-    content: " ";
-    background-color: #FCFCFC;
-    width: 230%;
-    position: absolute;
-    top: -100px;
-    height: 100px;
-    -webkit-transform: rotate(-4deg) translateX(-200px);
-    -moz-transform: rotate(-4deg) translateX(-200px);
-    -ms-transform: rotate(-4deg) translateX(-200px);
-    -o-transform: rotate(-4deg) translateX(-200px);
-    transform: rotate(-4deg) translateX(-200px); }
   #nosotros p {
     float: left;
     width: 100%;
@@ -875,20 +895,17 @@ iframe {
 #contacto {
   background-color: #141414;
   color: #FCFCFC;
-  position: relative; }
-  #contacto::before {
-    display: block;
-    content: " ";
-    background-color: #FCFCFC;
-    width: 230%;
-    position: absolute;
-    top: 0px;
-    height: 100px;
-    -webkit-transform: rotate(4deg) translateX(-200px);
-    -moz-transform: rotate(4deg) translateX(-200px);
-    -ms-transform: rotate(4deg) translateX(-200px);
-    -o-transform: rotate(4deg) translateX(-200px);
-    transform: rotate(4deg) translateX(-200px); }
+  position: relative;
+  /*    &::before{
+          display: block;
+          content: " ";
+          background-color: $white;
+          width: 230%;
+          position: absolute;
+          top: 0px;
+          height: 100px;
+          @include transform(rotate(4deg) translateX(-200px));
+      }*/ }
   #contacto h2 {
     color: #FCFCFC;
     border-bottom: 1px #262626 solid;
@@ -1024,20 +1041,17 @@ footer {
   width: 100%;
   background-color: #FCFCFC;
   color: #141414;
-  position: relative; }
-  footer::before {
-    display: block;
-    content: " ";
-    background-color: #FCFCFC;
-    width: 230%;
-    position: absolute;
-    top: -100px;
-    height: 100px;
-    -webkit-transform: rotate(-4deg) translateX(-200px);
-    -moz-transform: rotate(-4deg) translateX(-200px);
-    -ms-transform: rotate(-4deg) translateX(-200px);
-    -o-transform: rotate(-4deg) translateX(-200px);
-    transform: rotate(-4deg) translateX(-200px); }
+  position: relative;
+  /*  &::before{
+        display: block;
+        content: " ";
+        background-color: $white;
+        width: 230%;
+        position: absolute;
+        top: -100px;
+        height: 100px;
+        @include transform(rotate(-4deg) translateX(-200px));
+    }*/ }
   footer .social_blocklist {
     max-width: 150px; }
 
@@ -1162,7 +1176,7 @@ footer {
     transform: translateX(-90%); }
 
   #contacto h2 {
-    font-size: 35px;
+    font-size: 1.8em;
     padding-left: 0;
     padding-right: 0; }
 
@@ -1170,7 +1184,8 @@ footer {
     padding-left: 10%; }
 
   h2 {
-    padding-top: 40%; }
+    padding: 40% 0 20% 0;
+    font-size: 2em; }
 
   #freelancercontract {
     padding-bottom: 30% !important; }
@@ -1230,7 +1245,10 @@ footer {
     width: 90%; }
 
   .display span {
-    min-height: 200px; } }
+    min-height: 200px; }
+
+  .insert {
+    padding-bottom: 0%; } }
 /**
  * Syntax highlighting styles
  */
