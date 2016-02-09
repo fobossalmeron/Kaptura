@@ -2,5 +2,6 @@
 
 ## Falta
 
-### Cambios del 5/02/2016
-Listos
+### Contemplar
+
+Imágenes en mobile

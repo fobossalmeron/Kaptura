@@ -63,13 +63,14 @@ $(document).ready(function() {
   function closeMenu() {
     menuIcon.classList.remove('cross');
     allNav.classList.remove('openmenu');
+    cover.classList.remove('appeared');
+    body.classList.remove('preventscroll');
   };
 
   function toggleMenu(){
     menuIcon.classList.toggle('cross');
     allNav.classList.toggle('openmenu');
     body.classList.toggle('preventscroll');
-//    html.classList.toggle('preventscroll');
     cover.classList.toggle('appeared');
     setTimeout(function() {
     cover.classList.toggle('overlayed');

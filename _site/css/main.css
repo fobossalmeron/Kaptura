@@ -195,8 +195,7 @@ b {
   fill: #125688; }
 
 .email:hover path {
-  fill: #dd493d;
-  stroke: #dd493d; }
+  fill: #dd493d; }
 
 .social_icon_black svg path {
   fill: #141414; }
@@ -248,6 +247,8 @@ b {
   .error_info p {
     float: left;
     clear: both; }
+  .error_info a {
+    color: #FCFCFC; }
 
 /***
  * Under construction

@@ -1,7 +1,8 @@
 ---
 layout: es_default
-title: Renta de equipo
+title: Renta De Equipo
 permalink: rentadeequipo/
+menu: offhomepage
 ---
 
 ###Renta de Equipo

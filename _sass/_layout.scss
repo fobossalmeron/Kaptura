@@ -57,7 +57,7 @@
     &:hover{
         path{
             fill:#dd493d; 
-            stroke:#dd493d;
+           // stroke:#dd493d;
         }            
     }  
 }
@@ -126,6 +126,9 @@
     p{
         float:left;
         clear:both;
+    }
+    a{
+        color:$white;
     }
 }
 
