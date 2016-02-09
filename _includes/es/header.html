@@ -1,17 +1,18 @@
-<header class="site-header">
- 
-	<img class="headerlogo" src="{{ site.baseurl }}images/layout/logowhite.svg">
-  {% include menuicon.html %}
+{% include menuicon.html %}
+{% include menumobile.html %}
+<header class="site-header"> 
+	<img class="headerlogo" src="{{ site.baseurl }}images/layout/logo.svg">
   <nav class="site-nav">
     <a class="page-link" href="#inicio">Inicio</a>
     <a class="page-link" href="#portafolio">Estudios de caso</a>
     <a class="page-link" href="#nosotros">Sobre nosotros</a>
     <a class="page-link" href="#contacto">Contáctanos</a>
+    <a class="page-link" href="{{site.baseurl}}rentadeequipo/">Renta de equipo</a>
   </nav>
 
   <div class="language">
     <a class="language-link" href="{{ site.baseurl }}"><b>Español</b></a>
     <a class="language-link" href="{{ site.baseurl }}en/">English</a>
   </div>
-
 </header>
+<div class="cover"></div>

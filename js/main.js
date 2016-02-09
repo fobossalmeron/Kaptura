@@ -54,8 +54,10 @@ $(document).ready(function() {
 
   var allNav = querySelector('.site-header');
   var menuIcon = querySelector('.menuicon');
+  var menuMobile = querySelector('.menumobile');
   var body = querySelector('body');
   var html = querySelector('html');
+  var cover = querySelector('.cover');
 
 
   function closeMenu() {
@@ -66,11 +68,16 @@ $(document).ready(function() {
   function toggleMenu(){
     menuIcon.classList.toggle('cross');
     allNav.classList.toggle('openmenu');
-//    body.classList.toggle('preventscroll');
+    body.classList.toggle('preventscroll');
 //    html.classList.toggle('preventscroll');
+    cover.classList.toggle('appeared');
+    setTimeout(function() {
+    cover.classList.toggle('overlayed');
+   }, 100);
   };
 
   menuIcon.addEventListener('click', toggleMenu);
+  menuMobile.addEventListener('click', toggleMenu);
 
   allNav.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {

@@ -1,27 +1,28 @@
 <section id="nosotros">
 <div class="diagonalcont">
-<div class="diagonalpos black"></div>
+<div class="diagonalpos"></div>
 </div>
   <main>
 	<h2>Sobre nosotros</h2>
-	<p><b>Kaptura Projects</b> es ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+	<p><b>Kaptura Projects</b> es ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. También rentamos <a href="{{site.baseurl}}rentadeequipo/"><b>equipo de filmación!</b></a></p>
 	<ul class="members">
 		{% for member in site.members %}
 		<li>
 			<div class="display profilecard">
 				<span class="colorize" style="background-image:url({{site.baseurl}}images/members/{{member.profile}})"></span>
+				<span class="colorizephoto" style="background-image:url({{site.baseurl}}images/members/{{member.profileback}})"></span>
 			</div>
 			<h3>{{ member.name}} </h3>
 			<p>{{member.es_description}}</p>
 	        <div class="social_blocklist">
 	          <a target="_blank" href="mailto:{{ member.mail }}">
-	          	<span class="social_icon_black">{% include mail.html %}</span>
+	          	<span class="social_icon_white">{% include mail.html %}</span>
 	          </a>
 	          <a target="_blank" href="{{ member.facebook }}">
-	          	<span class="social_icon_black">{% include facebook.html %}</span>
+	          	<span class="social_icon_white">{% include facebook.html %}</span>
 	          </a>
 	          <a target="_blank" href="{{ member.instagram }}">
-	            <span class="social_icon_black">{% include instagram.html %}</span>
+	            <span class="social_icon_white">{% include instagram.html %}</span>
 	          </a>
 	        </div>
 		</li>

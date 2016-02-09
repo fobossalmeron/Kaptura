@@ -22,8 +22,8 @@ $border-width: 0px;
 
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $black;
-    background-color: $white;
+    color: $white;
+    background-color: $black;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -33,7 +33,6 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    padding-left:5%;
     overflow-x: hidden;
 }
 
@@ -232,4 +231,12 @@ b{
         -ms-transform: $transforms;
          -o-transform: $transforms;
           transform: $transforms;
+}
+
+@mixin box-shadow($x, $y, $dispersion, $color) {
+    -webkit-box-shadow: $x $y $dispersion $color;
+       -moz-box-shadow: $x $y $dispersion $color;
+        -ms-box-shadow: $x $y $dispersion $color;
+         -o-box-shadow: $x $y $dispersion $color;
+            box-shadow: $x $y $dispersion $color;
 }

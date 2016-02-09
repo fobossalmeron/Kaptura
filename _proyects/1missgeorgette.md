@@ -1,5 +1,5 @@
 ---
-id: "missgeorgette"
+selector: "missgeorgette"
 logo: "missgeorgette.svg"
 es_title: "Miss Georgette Invierno 2015"
 es_subtitle: "Producción de una campaña por internet para Miss Georgette"
