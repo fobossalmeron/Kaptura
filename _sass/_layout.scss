@@ -5,7 +5,7 @@
   overflow: hidden;
   position:relative;
 }
-.parallaxParent > * {
+.parallaxChild {
   height: 150%;
   margin-top: -2px;
   border: 2px solid $white;
@@ -1187,6 +1187,9 @@ footer{
 }
 
 @include media-query($mobile){
+  .parallaxChild {
+    top: -90%;
+  }
     #contacto .social_blocklist {
     padding-right: 0%;
     }
