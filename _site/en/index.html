@@ -37,7 +37,12 @@
   <meta name="theme-color" content="#ffffff">
 
   <script src="/js/jquery-1.11.3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700|Fira+Sans:300,500' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
 </head>
 
 
@@ -467,75 +472,99 @@
 </div>
   <main>
 	<h2>Estudios de caso</h2>
+  <script>
+  //Parallax heights
+  function parallaxresize(proyectselector, number, screen){
+    var size = $("#coverer" + proyectselector + number).height();
+    var mobilesize = $("#coverer" + proyectselector + number + "mob").height();
+
+    if ($(window).width() < 800) {
+    $("#" + proyectselector + number).css("height", mobilesize - 3);
+//    console.log("Height de minitablet y es " + mobilesize);
+    }
+    else {
+      $("#" + proyectselector + number).css("height", size - 3);
+//      console.log("Height de minitablet y es " + size);
+    }
+  }
+  </script>
 
 	
 		<div class="proyect">
 			<div class="main_title">
-			    <h3>Web-Serie Excapes</h3>
-			    <p>Excapes es una web-serie de viajes</p>
+			    <h3>Excapes</h3>
+			    <p>¿Cuál es tu excusa para viajar? <br />Reality-documental</p>
 			</div>
 			<div class="main_image">
 				<img class="insert" src="/images/portfolio/excapes/excapes.svg" />
 			</div>
 			<iframe class="video_insert" src="https://player.vimeo.com/video/147327791" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 			<div class="columned">
-			<p><strong>EXCAPES</strong> es una serie web ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro illo inventore veritatis quisquam est, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illo inventore illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+			<p><strong>EXCAPES</strong> es un proyecto transmedia que consta de una serie web que te invita a viajar con Manu y una guía que busca ayudarte a descubrir México. Nuestra intención es inspirar a los jóvenes a agarrar la mochila y salir a viajar. Manu tiene 28 años, acaban de despedirlo de su trabajo y en este momento está viajando. ¿La excusa que le impulsó a viajar? Encontró unas fotos de su papá, a quien nunca conoció y decidió ir a los lugares a donde él había viajado. Pero las fotos no dicen ni lugar, ni fecha. ¿Cómo encontrarlos? Nuestra equipo creativo  creó a Manu, un viajero con las mismas ganas de excapar que nosotros. Nuestra idea es grabar su experiencia para transmitir nuestras ansias de viajar a través de él.</p>
 
 			</div>
-			<div class="display_container single_line">
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes1.jpg)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes1.jpg)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes1.jpg)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes1.jpg)"></span>
-				</div>
-			</div>
+
+      <div id="excapes1" class="parallaxParent">
+        <img id="covererexcapes1" class="coverer above-minitablet" src="/images/layout/singlelinegrid.svg" />
+        <img id="covererexcapes1mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
+      	<div style="background-image: url(/images/portfolio/excapes/excapes1.jpg);"></div>
+      </div>
+
+      <script>
+        parallaxresize("excapes", 1);
+        $( window ).resize(function() {
+          parallaxresize("excapes", 1);
+        });
+      </script>
+
 			<div class="brief">
 				<h3>Brief</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+				<p>El objetivo de Excapes es incentivar a los jóvenes a visitar aquellos lugares de México que aún no conocen y al mismo tiempo impulsar el desarrollo turístico y económico de los estados en los que se realiza el programa. Nuestro reto es captar el interés de los millennials que inconformes con los contenidos de la televisión abierta, prefieren consumir los productos audiovisuales por internet.</p>
 			</div>
 			<div class="solution">
 				<h3>Solución</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+				<p>La serie introduce al espectador en la vida de Manu a través de la grabación de sus viajes. El material está disponible en la web de Excapes, utilizando un formato de video corto, tanto para los capítulos, como para las cápsulas informativas. Cada destino consta de 4 capítulos de 10 minutos. Como extra se publican en la web cápsulas de 1 minuto de duración con material relacionado con la serie. </p>
 			</div>
-			<div class="display_container">
-				<div class="display">
-					<span></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes2.jpg)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes2.jpg)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes2.jpg)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes3.jpg)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes3.jpg)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/excapes/excapes3.jpg)"></span>
-				</div>
-				<div class="display">
-					<span></span>
-				</div>
+
+      <div id="excapes2" class="parallaxParent">
+        <img id="covererexcapes2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg" />
+        <img id="covererexcapes2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
+      	<div style="background-image: url(/images/portfolio/excapes/excapes2.jpg);"></div>
+      </div>
+
+      <script>
+        parallaxresize("excapes", 2);
+        $( window ).resize(function() {
+          parallaxresize("excapes", 2);
+        });
+      </script>
+
+      <script>
+      	// init controller
+      	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+      	// build scenes
+      	new ScrollMagic.Scene({triggerElement: "#excapes1"})
+      					.setTween("#excapes1 > div", {y: "100%", ease: Linear.easeNone})
+      		//		.addIndicators()
+      					.addTo(controller);
+      	new ScrollMagic.Scene({triggerElement: "#excapes2"})
+      					.setTween("#excapes2 > div", {y: "100%", ease: Linear.easeNone})
+      			//	.addIndicators()
+      					.addTo(controller);
+                /*
+      	new ScrollMagic.Scene({triggerElement: "#parallax3"})
+      					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+      					.addIndicators()
+      					.addTo(controller);*/
+      </script>
+
 			</div>
-		</div>
+		
 	
 		<div class="proyect">
 			<div class="main_title">
-			    <h3>Miss Georgette Invierno 2015</h3>
-			    <p>Producción de una campaña por internet para Miss Georgette</p>
+			    <h3>Miss Georgette</h3>
+			    <p>Sketches y mini-reportajes</p>
 			</div>
 			<div class="main_image">
 				<img class="insert" src="/images/portfolio/missgeorgette/missgeorgette.svg" />
@@ -545,65 +574,160 @@
 			<p><strong>MISS GEORGETTE</strong> es una marca sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
 
 			</div>
-			<div class="display_container single_line">
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-			</div>
+
+      <div id="missgeorgette1" class="parallaxParent">
+        <img id="coverermissgeorgette1" class="coverer above-minitablet" src="/images/layout/singlelinegrid.svg" />
+        <img id="coverermissgeorgette1mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
+      	<div style="background-image: url(/images/portfolio/missgeorgette/missgeorgette1.png);"></div>
+      </div>
+
+      <script>
+        parallaxresize("missgeorgette", 1);
+        $( window ).resize(function() {
+          parallaxresize("missgeorgette", 1);
+        });
+      </script>
+
 			<div class="brief">
 				<h3>Brief</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+				<p>La marca buscaba actualizar el formato del catálogo conforme a los nuevos hábitos de consumo. Además deseaba renovar la imagen de marca para satisfacer las expectativas de sus clientes.  Su objetivo era reforzar la presencia de la marca en el mercado y facilitar su promoción en redes sociales, produciendo contenido en video y fotografía de las nuevas líneas de ropa y promocionando las existentes de manera más atractiva y divertida.</p>
 			</div>
 			<div class="solution">
 				<h3>Solución</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</p>
+				<p>Se realizaron pequeños sketches inspirados en la vida cotidiana de las trabajadoras corporativas. Los sketches duran entre treinta segundos y un minuto. La mayoría de los sketches suceden dentro de una oficina, ya sea en la recepción, en la zona de cubículos o en el patio. Se buscó el uso de tomas fijas y abiertas para mostrar los atuendos completos. A la par se realizaron reportajes donde se presentan cinco mujeres, cada uno con una duración aproximada de un minuto. Ellas cuentan su trayectoria laboral con anécdotas que ilustran la versatilidad que brindan los modelos de Miss Georgette. </p>
 			</div>
-			<div class="display_container">
-				<div class="display">
-					<span></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url(/images/portfolio/missgeorgette/missgeorgette1.png)"></span>
-				</div>
-				<div class="display">
-					<span></span>
-				</div>
+
+      <div id="missgeorgette2" class="parallaxParent">
+        <img id="coverermissgeorgette2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg" />
+        <img id="coverermissgeorgette2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
+      	<div style="background-image: url(/images/portfolio/missgeorgette/missgeorgette1.png);"></div>
+      </div>
+
+      <script>
+        parallaxresize("missgeorgette", 2);
+        $( window ).resize(function() {
+          parallaxresize("missgeorgette", 2);
+        });
+      </script>
+
+      <script>
+      	// init controller
+      	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+      	// build scenes
+      	new ScrollMagic.Scene({triggerElement: "#missgeorgette1"})
+      					.setTween("#missgeorgette1 > div", {y: "100%", ease: Linear.easeNone})
+      		//		.addIndicators()
+      					.addTo(controller);
+      	new ScrollMagic.Scene({triggerElement: "#missgeorgette2"})
+      					.setTween("#missgeorgette2 > div", {y: "100%", ease: Linear.easeNone})
+      			//	.addIndicators()
+      					.addTo(controller);
+                /*
+      	new ScrollMagic.Scene({triggerElement: "#parallax3"})
+      					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+      					.addIndicators()
+      					.addTo(controller);*/
+      </script>
+
 			</div>
-		</div>
+		
+	
+		<div class="proyect">
+			<div class="main_title">
+			    <h3>Autofagia</h3>
+			    <p>¿Qué es la autofagia? <br />Video de animación cut out sobre acuarela.</p>
+			</div>
+			<div class="main_image">
+				<img class="insert" src="/images/portfolio/autofagia/missgeorgette.svg" />
+			</div>
+			<iframe class="video_insert" src="https://player.vimeo.com/video/147327791" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+			<div class="columned">
+			<p><strong>AUTOFAGIA</strong> es un video de divulgación científica creado para dar a conocer el concepto de autofagia celular. La autofagia es el proceso biológico a través del cual una célula se come parte de sí misma. Este proceso es necesario para la formación y correcto funcionamiento de las células. Su mal funcionamiento puede generar enfermedades degenerativas como el parkinson, el alzheimer y, eventualmente, la muerte. Actualmente la autofagia celular está en vías de investigación.</p>
+
+			</div>
+
+      <div id="autofagia1" class="parallaxParent">
+        <img id="covererautofagia1" class="coverer above-minitablet" src="/images/layout/singlelinegrid.svg" />
+        <img id="covererautofagia1mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
+      	<div style="background-image: url(/images/portfolio/autofagia/autofagia1.png);"></div>
+      </div>
+
+      <script>
+        parallaxresize("autofagia", 1);
+        $( window ).resize(function() {
+          parallaxresize("autofagia", 1);
+        });
+      </script>
+
+			<div class="brief">
+				<h3>Brief</h3>
+				<p>Desde el departamento de fisiología celular de la UNAM, la doctora Susana Castro, nos pidió realizar un video que pudiera explicar el proceso de autofagia celular para poder acercar el concepto científico a un público general.</p>
+			</div>
+			<div class="solution">
+				<h3>Solución</h3>
+				<p>Para explicar el concepto de autofagia celular se escribió un guión empleando palabras y definiciones sencillas para hacerlo más comprensible al público. A partir de la técnica cut out, animamos unos dibujos en acuarela. Sobre esta animación una voz en off va explicando paso a paso el proceso de autofagia.</p>
+			</div>
+
+      <div id="autofagia2" class="parallaxParent">
+        <img id="covererautofagia2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg" />
+        <img id="covererautofagia2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
+      	<div style="background-image: url(/images/portfolio/autofagia/autofagia1.png);"></div>
+      </div>
+
+      <script>
+        parallaxresize("autofagia", 2);
+        $( window ).resize(function() {
+          parallaxresize("autofagia", 2);
+        });
+      </script>
+
+      <script>
+      	// init controller
+      	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+      	// build scenes
+      	new ScrollMagic.Scene({triggerElement: "#autofagia1"})
+      					.setTween("#autofagia1 > div", {y: "100%", ease: Linear.easeNone})
+      		//		.addIndicators()
+      					.addTo(controller);
+      	new ScrollMagic.Scene({triggerElement: "#autofagia2"})
+      					.setTween("#autofagia2 > div", {y: "100%", ease: Linear.easeNone})
+      			//	.addIndicators()
+      					.addTo(controller);
+                /*
+      	new ScrollMagic.Scene({triggerElement: "#parallax3"})
+      					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+      					.addIndicators()
+      					.addTo(controller);*/
+      </script>
+
+			</div>
+		
 	
   </main>
 </section>
+
 <section id="nosotros">
 <div class="diagonalcont">
 <div class="diagonalpos"></div>
 </div>
   <main>
 	<h2>Sobre nosotros</h2>
-	<p><b>Kaptura Projects</b> es ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. También rentamos <a href="/rentadeequipo/"><b>equipo de filmación!</b></a></p>
+    <h3>Qué te ofrece Kaptura?</h3>
+    	<p>Si quieres llevar a cabo un proyecto audiovisual Kaptura puede ayudarte en
+        todo su proceso desde la concepción de la idea hasta el último proceso de post-producción,
+        adecuandonos a tus necesidades. Incluso si necesitas equipo de cámara o equipo de sonido
+        nosotros podemos ayudarte.<br />
+        Pásate por nuestra página de renta, revisa nuestra lista de equipo y si te interesa
+        renta los días que necesites con sólo un click!
+        <br />
+        <a href="/rentadeequipo/"><b>Renta tu equipo con nosotros!</b></a>
+      </p>
+	<h3>La productora </h3>
+      <p>
+        Kaptura existe para producir ideas brillantes. La productora nace de los deseos de
+        un grupo de jóvenes especialistas en el campo audiovisual que buscan generar proyectos
+        que impacten en el público.
+      </p>
 	<ul class="members">
 		
 		<li>
@@ -821,6 +945,7 @@
 	</ul>
   </main>
 </section>
+
 <section id="contacto">
 <div class="diagonalcont">
 <div class="diagonalpos black"></div>
@@ -828,7 +953,7 @@
   <main>
 	<h2>Contáctanos</h2>
 	<section id="clientcontact">
-		<p>Si estás interesado en pedir un proyecto o quieres trabajar con nosotros puedes escribirnos en esta hoja de contacto o mandar un mail a <a target="_blank" href="mailto:contacto@kapturaprojects.com"><b>contacto</b>@kapturaprojects.com</a></p>
+		<p>Si estás interesado en que produzcamos tu proyecto, escríbenos a esta página de contacto. También puedes enviarnos un e-mail a <a target="_blank" href="mailto:contacto@kapturaprojects.com"><b>contacto</b>@kapturaprojects.com</a></p>
 		  <form action="http://formspree.io/contacto@kapturaprojects.com" method="POST">
     <div class="blocklabel">
         <label class="form_name" for="name">Nombre</label>    
@@ -914,6 +1039,7 @@
     </section>
   </main>
 </section>
+
 
     <footer class="site-footer">
 <div class="diagonalcont">

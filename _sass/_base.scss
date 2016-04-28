@@ -240,3 +240,11 @@ b{
          -o-box-shadow: $x $y $dispersion $color;
             box-shadow: $x $y $dispersion $color;
 }
+
+@mixin clippath($all) {
+    -webkit-clip-path: $all;
+    -moz-clip-path: $all;
+    -ms-clip-path: $all;
+    -o-clip-path: $all;
+    clip-path: $all;
+}

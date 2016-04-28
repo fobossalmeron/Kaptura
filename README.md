@@ -1,7 +1,10 @@
 # Kapturaprojects.com
 
 ## Falta
+- Fotos
+- Textos en inglés
+- Patrocinadores / Clientes
+- Nuestra filosofía es:
 
 ### Contemplar
-
-Imágenes en mobile
+Menú en mobile ?

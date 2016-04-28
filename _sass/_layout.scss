@@ -1,3 +1,19 @@
+.parallaxParent {
+  height: 800px;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  position:relative;
+}
+.parallaxParent > * {
+  height: 150%;
+  margin-top: -2px;
+  border: 2px solid $white;
+  position: relative;
+  top: -110%;
+  background-position:50% 50%;
+}
+
 /***
  * Social icons
  */
@@ -33,7 +49,7 @@
     &:hover{
         path{
             fill: #3b5998;
-        }            
+        }
     }
 }
 
@@ -41,7 +57,7 @@
     &:hover{
         path{
             fill: #bb0000;
-        }            
+        }
     }
 }
 
@@ -49,17 +65,17 @@
     &:hover{
         path{
             fill:#125688;
-        }            
+        }
     }
 }
 
 .email{
     &:hover{
         path{
-            fill:#dd493d; 
+            fill:#dd493d;
            // stroke:#dd493d;
-        }            
-    }  
+        }
+    }
 }
 
 .social_icon_black{
@@ -194,7 +210,7 @@
           $brand-color 10px,
           $background-color 10px,
           $background-color 20px
-        );  
+        );
         background-size: 100px 100px;
         background-color: $brand-color;
     }
@@ -370,7 +386,7 @@
 
 /**
  * Site Main
- */ 
+ */
 main{
     width: 80%;
     max-width: 970px;
@@ -410,12 +426,12 @@ h2{
 
     .triangle{
         display: block;
-        width: 40px;
+        width: 30px;
         position: relative;
         left: 50%;
         @include transform(translateX(-50%));
         height: 40px;
-        margin-top: 35px;  
+        margin-top: 35px;
         z-index: 2;
 
         &:hover{
@@ -423,15 +439,15 @@ h2{
                 border-top: 20px solid $dirtywhite;
                 @include transform(scale(1.2) translateX(-3px));
             }
-        }      
+        }
             &::after{
             content: ' ';
             display: block;
-            width: 0; 
-            height: 0; 
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-top: 20px solid $white;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid $white;
             position: absolute;
             @include transition(.2s, ease);
             transform-origin: 0 0;
@@ -456,7 +472,7 @@ h2{
     position: relative;
     margin-top: 50px;
     z-index: 2;
-} 
+}
 
 @keyframes blink {
   0% {
@@ -540,7 +556,7 @@ $clacket-width: 1px;
 
     h2{
         color: $black;
-    }   
+    }
 
     h3{
         padding: 5%;
@@ -568,6 +584,40 @@ $clacket-width: 1px;
     }
 }
 
+.clip {
+    @include clippath(polygon(25% 10%, 100% 0, 100% 90%, 25% 100%));
+}
+
+
+.box{
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+}
+
+.boximage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.coverer{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.covered{
+    width:130%;
+}
 
 .diagonalpos{
     display: block;
@@ -614,14 +664,20 @@ $clacket-width: 1px;
 }
 
 .single_line{
-    padding-bottom: 15% !important;
+    margin-bottom: 15% !important;
 }
 
 .display_container{
     float:left;
     box-sizing: border-box;
-    padding: 10% 0 25% 0;
+    margin: 10% 0 25% 0;
     width:100%;
+    overflow:hidden;
+    position: relative;
+}
+
+.scene{
+    margin:0px;
 }
 
 .display{
@@ -725,9 +781,10 @@ iframe{
     h3{
         text-align: center;
         font-size: 25px;
-        font-weight: 400;
+        font-weight: 200;
         width: 100%;
         box-sizing: border-box;
+        padding: 0 15%;
     }
 
     p{
@@ -736,8 +793,9 @@ iframe{
         box-sizing: border-box;
         border-top: $clacket-width $dirtyblack solid;
         margin-bottom: 0;
-        padding: 5% 30%;
+        padding: 5% 22%;
         text-align: center;
+        line-height: 1.6;
 
     }
     a{
@@ -825,7 +883,7 @@ iframe{
         color: $black;
         border-bottom: $clacket-width $dirtywhite solid;
         width: 100%;
-    } 
+    }
 
     p a{
         color: $dirtyblack;
@@ -842,7 +900,7 @@ iframe{
         float: left;
         width: 50%;
         box-sizing: border-box;
-        
+
         &:nth-child(2) {
             padding-right: 0;
         }
@@ -856,7 +914,7 @@ iframe{
     .display{
         min-height: 300px;
     }
-} 
+}
 
 #clientcontact{
     padding-left: 0px !important;
@@ -886,7 +944,7 @@ form{
         box-sizing: border-box;
         text-align: left;
         padding-bottom: 10px;
-   
+
     }
     input{
         float: left;
@@ -1099,8 +1157,14 @@ footer{
         min-height: 250px;
     }
 }
-
+.minitablet{
+  display:none;
+}
+.above-minitablet{
+  display:block;
+}
 @include media-query($mini-tablet){
+
    #nosotros .members{
         li{
             width: 1px / 2.9px * 100%;
@@ -1108,8 +1172,17 @@ footer{
 
             &:nth-child(2n+0){
                 margin-right:0px;
-            } 
+            }
         }
+        p{
+          padding: 5% 20%;
+        }
+    }
+    .minitablet{
+      display:block;
+    }
+    .above-minitablet{
+      display:none;
     }
 }
 
@@ -1176,7 +1249,7 @@ footer{
     }
 
     #nosotros p{
-        padding: 5% 15% !important;
+        padding: 5% 5% !important;
     }
 
     #nosotros .members li{

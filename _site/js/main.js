@@ -7,7 +7,7 @@ $(document).ready(function() {
   }
   var locationPath = filterPath(location.pathname);
   var scrollElem = scrollableElement('html', 'body');
- 
+
   $('a[href*=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
     if (  locationPath == thisPath
@@ -25,7 +25,7 @@ $(document).ready(function() {
       }
     }
   });
- 
+
   // use the first element that is "scrollable"
   function scrollableElement(els) {
     for (var i = 0, argLength = arguments.length; i <argLength; i++) {
@@ -44,7 +44,7 @@ $(document).ready(function() {
     }
     return [];
   }
- 
+
 });
 
 (function () {
@@ -64,6 +64,7 @@ $(document).ready(function() {
     menuIcon.classList.remove('cross');
     allNav.classList.remove('openmenu');
     cover.classList.remove('appeared');
+    cover.classList.remove('overlayed');
     body.classList.remove('preventscroll');
   };
 
@@ -79,6 +80,7 @@ $(document).ready(function() {
 
   menuIcon.addEventListener('click', toggleMenu);
   menuMobile.addEventListener('click', toggleMenu);
+  cover.addEventListener('click', closeMenu);
 
   allNav.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
@@ -182,7 +184,7 @@ function initialize() {
 //Define image y guarda en .png, widthxheight en medidas, origen el centro y anchor la punta que señala
 
   var image = {
-      url: '/images/layout/eyemap.svg', 
+      url: '/images/layout/eyemap.svg',
       size: new google.maps.Size(50,50),
       origin: new google.maps.Point(0,0),
       anchor: new google.maps.Point(30,70)

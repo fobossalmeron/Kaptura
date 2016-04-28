@@ -4,6 +4,22 @@
 </div>
   <main>
 	<h2>Estudios de caso</h2>
+  <script>
+  //Parallax heights
+  function parallaxresize(proyectselector, number, screen){
+    var size = $("#coverer" + proyectselector + number).height();
+    var mobilesize = $("#coverer" + proyectselector + number + "mob").height();
+
+    if ($(window).width() < 800) {
+    $("#" + proyectselector + number).css("height", mobilesize - 3);
+//    console.log("Height de minitablet y es " + mobilesize);
+    }
+    else {
+      $("#" + proyectselector + number).css("height", size - 3);
+//      console.log("Height de minitablet y es " + size);
+    }
+  }
+  </script>
 
 	{% for proyect in site.proyects reversed %}
 		<div class="proyect">
@@ -18,20 +34,20 @@
 			<div class="columned">
 			{{ proyect.content }}
 			</div>
-			<div class="display_container single_line">
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_1}})"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_1}})"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_1}})"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_1}})"></span>
-				</div>
-			</div>
+
+      <div id="{{proyect.selector}}1" class="parallaxParent">
+        <img id="coverer{{proyect.selector}}1" class="coverer above-minitablet" src="{{site.baseurl}}images/layout/singlelinegrid.svg">
+        <img id="coverer{{proyect.selector}}1mob" class="coverer minitablet" src="{{site.baseurl}}images/layout/singlelinegridminitablet.svg">
+      	<div style="background-image: url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_1}});"></div>
+      </div>
+
+      <script>
+        parallaxresize("{{proyect.selector}}", 1);
+        $( window ).resize(function() {
+          parallaxresize("{{proyect.selector}}", 1);
+        });
+      </script>
+
 			<div class="brief">
 				<h3>Brief</h3>
 				<p>{{ proyect.es_brief}}</p>
@@ -40,31 +56,39 @@
 				<h3>Solución</h3>
 				<p>{{ proyect.es_solution}}</p>
 			</div>
-			<div class="display_container">
-				<div class="display">
-					<span></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_2}})"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_2}})"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_2}})"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_3}})"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_3}})"></span>
-				</div>
-				<div class="display">
-					<span style="background-image:url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_3}})"></span>
-				</div>
-				<div class="display">
-					<span></span>
-				</div>
+
+      <div id="{{proyect.selector}}2" class="parallaxParent">
+        <img id="coverer{{proyect.selector}}2" class="coverer above-minitablet" src="{{site.baseurl}}images/layout/doublelinegrid.svg">
+        <img id="coverer{{proyect.selector}}2mob" class="coverer minitablet" src="{{site.baseurl}}images/layout/singlelinegridminitablet.svg">
+      	<div style="background-image: url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_2}});"></div>
+      </div>
+
+      <script>
+        parallaxresize("{{proyect.selector}}", 2);
+        $( window ).resize(function() {
+          parallaxresize("{{proyect.selector}}", 2);
+        });
+      </script>
+
+      <script>
+      	// init controller
+      	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+      	// build scenes
+      	new ScrollMagic.Scene({triggerElement: "#{{proyect.selector}}1"})
+      					.setTween("#{{proyect.selector}}1 > div", {y: "100%", ease: Linear.easeNone})
+      		//		.addIndicators()
+      					.addTo(controller);
+      	new ScrollMagic.Scene({triggerElement: "#{{proyect.selector}}2"})
+      					.setTween("#{{proyect.selector}}2 > div", {y: "100%", ease: Linear.easeNone})
+      			//	.addIndicators()
+      					.addTo(controller);
+                /*
+      	new ScrollMagic.Scene({triggerElement: "#parallax3"})
+      					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+      					.addIndicators()
+      					.addTo(controller);*/
+      </script>
+
 			</div>
 		</div>
 	{% endfor %}
