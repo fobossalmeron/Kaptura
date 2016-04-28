@@ -42,7 +42,9 @@
       </div>
 
       <script>
-        parallaxresize("{{proyect.selector}}", 1);
+      $( document ).ready(function() {
+          parallaxresize("{{proyect.selector}}", 1);
+        });
         $( window ).resize(function() {
           parallaxresize("{{proyect.selector}}", 1);
         });
