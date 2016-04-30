@@ -2,7 +2,7 @@
 selector: "excapes"
 logo: "excapes.svg"
 es_title: "Excapes"
-es_subtitle: "¿Cuál es tu excusa para viajar? <br>Reality-documental"
+es_subtitle: "<b>¿Cuál es tu excusa para viajar?</b> <br>Reality-documental"
 en_title: "Web-Serie Excapes"
 en_subtitle: "Excapes is a traveling web-serie"
 video: "https://player.vimeo.com/video/147327791"
@@ -16,4 +16,4 @@ display_2: "excapes2.jpg"
 display_3: "excapes3.jpg"
 display_4: "excapes4.jpg"
 ---
-**EXCAPES** es un proyecto transmedia que consta de una serie web que te invita a viajar con Manu y una guía que busca ayudarte a descubrir México. Nuestra intención es inspirar a los jóvenes a agarrar la mochila y salir a viajar. Manu tiene 28 años, acaban de despedirlo de su trabajo y en este momento está viajando. ¿La excusa que le impulsó a viajar? Encontró unas fotos de su papá, a quien nunca conoció y decidió ir a los lugares a donde él había viajado. Pero las fotos no dicen ni lugar, ni fecha. ¿Cómo encontrarlos? Nuestra equipo creativo  creó a Manu, un viajero con las mismas ganas de excapar que nosotros. Nuestra idea es grabar su experiencia para transmitir nuestras ansias de viajar a través de él.
+**EXCAPES** es un proyecto transmedia que consta de una serie web que te invita a viajar con Manu y una guía que busca ayudarte a descubrir México. Nuestra intención es inspirar a los jóvenes a agarrar la mochila y salir a viajar. Manu tiene 28 años, acaban de despedirlo de su trabajo y en este momento está viajando. ¿La excusa que le impulsó a viajar? Encontró unas fotos de su papá, a quien nunca conoció y decidió ir a los lugares a donde él había viajado. Pero las fotos no dicen ni lugar, ni fecha. ¿Cómo encontrarlos? Nuestra equipo creativo  creó a Manu, un viajero con las mismas ganas de escapar que nosotros. Nuestra idea es grabar su experiencia para transmitir nuestras ansias de viajar a través de él.

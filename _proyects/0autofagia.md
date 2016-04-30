@@ -2,7 +2,7 @@
 selector: "autofagia"
 logo: "missgeorgette.svg"
 es_title: "Autofagia"
-es_subtitle: "¿Qué es la autofagia? <br>Video de animación cut out sobre acuarela."
+es_subtitle: "<b>¿Qué es la autofagia?</b> <br>Video de animación cut out sobre acuarela."
 en_title: "Miss Georgette Winter 2015"
 en_subtitle: "Internet-based campaign production for Miss Georgette"
 video: "https://player.vimeo.com/video/147327791"
