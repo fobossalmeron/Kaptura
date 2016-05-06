@@ -930,7 +930,10 @@ iframe {
   #nosotros a {
     color: #EFEFEF; }
   #nosotros .social_blocklist {
-    max-width: 120px; }
+    max-width: 50px;
+    min-height: 115px; }
+    #nosotros .social_blocklist span {
+      width: 100%; }
   #nosotros .members {
     float: left;
     box-sizing: border-box;
@@ -1135,7 +1138,8 @@ footer {
   padding: 5% 0;
   text-align: center; }
   .footer-section:nth-last-child(1) {
-    border: none; }
+    border: none;
+    padding: 5% 0 0 0; }
 
 .pastclients {
   float: left;
@@ -1178,6 +1182,14 @@ footer {
   padding-top: 10%;
   clear: both; }
 
+.legales {
+  float: left;
+  clear: both;
+  text-align: center;
+  width: 100%;
+  margin-top: 4%;
+  padding-bottom: 2%; }
+
 /**
  * Page content
  */
@@ -1215,7 +1227,7 @@ footer {
     padding: 10% 0; }
 
   #nosotros h3 {
-    padding: 0; }
+    padding: 11%; }
 
   .footer-contact li {
     width: 100%;

@@ -31,15 +31,21 @@
 			<h3>{{ member.name}} </h3>
 			<p>{{member.es_description}}</p>
 	        <div class="social_blocklist">
+            {% if member.mail %}
 	          <a target="_blank" href="mailto:{{ member.mail }}">
 	          	<span class="social_icon_white">{% include mail.html %}</span>
 	          </a>
+            {% endif %}
+            {% if member.facebook %}
 	          <a target="_blank" href="{{ member.facebook }}">
 	          	<span class="social_icon_white">{% include facebook.html %}</span>
 	          </a>
+            {% endif %}
+            {% if member.instagram %}
 	          <a target="_blank" href="{{ member.instagram }}">
 	            <span class="social_icon_white">{% include instagram.html %}</span>
 	          </a>
+            {% endif %}
 	        </div>
 		</li>
 		{% endfor %}

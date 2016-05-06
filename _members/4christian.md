@@ -5,6 +5,4 @@ en_description: "Aly did this and also this."
 profile: "christian.png"
 profileback: "christian.png"
 mail: "christian.torres@kapturaprojects.com"
-facebook: "https://www.facebook.com/ChristianIglesiasDepp"
-instagram: " "
 ---
