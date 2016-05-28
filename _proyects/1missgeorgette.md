@@ -2,7 +2,7 @@
 selector: "missgeorgette"
 logo: "missgeorgette.svg"
 es_title: "Miss Georgette"
-es_subtitle: "Sketches y mini-reportajes"
+es_subtitle: "Sketches y reportajes"
 en_title: "Miss Georgette Winter 2015"
 en_subtitle: "Internet-based campaign production for Miss Georgette"
 video: "https://player.vimeo.com/video/147327791"

@@ -15,11 +15,11 @@
       Si quieres llevar a cabo un proyecto audiovisual Kaptura puede ayudarte en
       todo su proceso desde la concepción de la idea hasta el último proceso de post-producción,
       adecuandonos a tus necesidades. Incluso si necesitas equipo de cámara o equipo de sonido
-      nosotros podemos ayudarte.<br>
-      Pásate por nuestra página de renta, revisa nuestra lista de equipo y si te interesa
-      renta los días que necesites con sólo un click!
+      nosotros podemos ayudarte, escríbenos a <a target="_blank" href="mailto:contacto@kapturaprojects.com"><b>contacto</b>@kapturaprojects.com</a>
+      <!-- Además, si lo que quieres es hacer tus propios proyectos y lo que necesitas es equipo,
+      ¡Nosotros te ayudamos! Pásate por nuestra página de renta donde encontrarás equipo de cámara y sonido a precios accesibles.
       <br>
-      <a href="{{site.baseurl}}rentadeequipo/"><b>Renta tu equipo con nosotros!</b></a>
+      <a href="{{site.baseurl}}rentadeequipo/"><b>Renta tu equipo con nosotros!</b></a>-->
     </p>
 	<ul class="members">
 		{% for member in site.members %}
@@ -44,6 +44,11 @@
             {% if member.instagram %}
 	          <a target="_blank" href="{{ member.instagram }}">
 	            <span class="social_icon_white">{% include instagram.html %}</span>
+	          </a>
+            {% endif %}
+            {% if member.linkedin %}
+	          <a target="_blank" href="{{ member.linkedin }}">
+	          	<span class="social_icon_white">{% include linkedin.html %}</span>
 	          </a>
             {% endif %}
 	        </div>
