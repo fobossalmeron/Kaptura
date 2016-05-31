@@ -800,7 +800,8 @@ h2 {
   column-gap: 40px; }
 
 .proyect {
-  float: left; }
+  float: left;
+  margin-bottom: 10%; }
 
 .single_line {
   margin-bottom: 15% !important; }
@@ -877,9 +878,24 @@ h2 {
   height: auto; }
 
 .video_insert {
-  min-height: 605px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
   box-sizing: border-box;
-  padding: 11% 0 8% 0; }
+  height: 0;
+  float: left;
+  margin-top: 5%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+  .video_insert iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .main_title {
   width: 50%;
