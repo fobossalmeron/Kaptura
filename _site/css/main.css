@@ -1205,6 +1205,8 @@ footer {
   width: 100%;
   margin-top: 4%;
   padding-bottom: 2%; }
+  .legales a {
+    color: #FCFCFC; }
 
 /**
  * Page content
