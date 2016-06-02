@@ -1,7 +1,7 @@
 ---
 layout: es_default
 title: Kaptura Projects
-permalink: /inicio/
+permalink: /
 ---
 
 {% include es/inicio.html %}
