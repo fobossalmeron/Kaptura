@@ -6,6 +6,15 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <meta property="og:site_name" content="Kaptura Projects" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if page.title %}{{ site.title }} | {{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:image" content="http://kapturaprojects.com/images/layout/og_image.jpg"/>
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:locale:alternate" content="es_ES" />
+
   <link rel="stylesheet" href="{{ site.baseurl }}css/main.css">
   <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
@@ -35,7 +44,6 @@
   <script src="{{ site.baseurl }}js/jquery-1.11.3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
-  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>-->
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700|Fira+Sans:300,500' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>

@@ -1,7 +1,8 @@
 .parallaxParent {
   height: 800px;
   float: left;
-  width: 100%;
+  width: 70%;
+  margin: 0 15%;
   overflow: hidden;
   position:relative;
 }
@@ -10,7 +11,7 @@
   margin-top: -2px;
   border: 2px solid $white;
   position: relative;
-  top: -110%;
+  top: -80%;
   background-position:50% 50%;
 }
 
@@ -1216,12 +1217,14 @@ footer{
     .above-minitablet{
       display:none;
     }
+    .legales{
+      margin-top: 10%;
+      font-size: 13px;
+    }
 }
 
 @include media-query($mobile){
-  .parallaxChild {
-    top: -90%;
-  }
+  
     #contacto .social_blocklist {
     padding-right: 0%;
     }
@@ -1280,7 +1283,7 @@ footer{
     .columned p{
         -webkit-column-count:1;
         column-count:1;
-        padding: 5% 15% !important;
+        //padding: 5% 15% !important;
     }
 
     #nosotros p{
