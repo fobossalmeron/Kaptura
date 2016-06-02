@@ -4,14 +4,16 @@ RewriteCond %{HTTP_HOST} !^drive.kapturaprojects.com$ [NC]
 RewriteRule ^(.*)$ http://kapturaprojects.com/$1 [L,R=301]
 RedirectMatch 301 ^/_site/(.*)$ http://kapturaprojects.com/
 
+AddDefaultCharset UTF-8
+
 ErrorDocument 404 /404/
 
-#3 WEEKS
+# 3 WEEKS
 <FilesMatch "\.(jpg|svg|png|ico)$">
 Header set Cache-Control "max-age=1814400, public"
 </FilesMatch>
 
 #1 WEEK
-# <FilesMatch "\.(css|js)$">
-# Header set Cache-Control "max-age=604800, proxy-revalidate"
-# </FilesMatch>
+<FilesMatch "\.(css|js)$">
+Header set Cache-Control "max-age=604800, proxy-revalidate"
+</FilesMatch>
