@@ -7,9 +7,9 @@ RedirectMatch 301 ^/_site/(.*)$ http://kapturaprojects.com/
 ErrorDocument 404 /404/
 
 #3 WEEKS
-# <FilesMatch "\.(jpg|svg|png|ico)$">
-# Header set Cache-Control "max-age=1814400, public"
-# </FilesMatch>
+<FilesMatch "\.(jpg|svg|png|ico)$">
+Header set Cache-Control "max-age=1814400, public"
+</FilesMatch>
 
 #1 WEEK
 # <FilesMatch "\.(css|js)$">
