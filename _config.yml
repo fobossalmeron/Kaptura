@@ -4,9 +4,9 @@ email: contacto@kapturaprojects.com
 description: Kaptura Projects es una productora de audiovisuales en la CDMX.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://kapturaprojects.com" # the base hostname & protocol for your site
-facebook: http://facebook.com
-youtube:  http://youtube.com
-instagram: http://instagram.com
+facebook: https://www.facebook.com/kapturaprojects/
+youtube:  https://www.youtube.com/channel/UCnTf8Gc9IyGqCxRUz0j5yWw
+instagram: https://www.instagram.com/kapturaprojectsmx/
 
 # Build settings
 markdown: kramdown
