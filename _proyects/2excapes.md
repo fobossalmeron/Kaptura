@@ -2,7 +2,7 @@
 selector: "excapes"
 logo: "excapes.svg"
 es_title: "Excapes"
-es_subtitle: "<b>¿Cuál es tu excusa para viajar?</b> <br>Reality-documental"
+es_subtitle: "<b>Serie web</b> <br>Género: reality - live"
 en_title: "Web-Serie Excapes"
 en_subtitle: "Excapes is a traveling web-serie"
 video: "https://www.youtube.com/embed/D5BoLNLLpxE?rel=0&amp;showinfo=0"
