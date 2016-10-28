@@ -13,4 +13,4 @@ en_solution: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem acc
 display_1: setratadeti1.jpg
 display_2: setratadeti2.jpg
 ---
-**Se Trata de Ti** es una película realizada para ayudar a prevenir la trata de personas. La película está compuesta por seis cortometrajes, cada uno de los cuales tiene su propio director, propuesta narrativa y visual, dura aproximadamente 15 minutos y aborda un tema distinto de la trata de personas: explotación sexual infantil, explotación laboral en el campo, menores en la delincuencia organizada, albergues disfuncionales, los familiares de las víctimas e internet como medio de captación de víctimas.
+**SE TRATA DE TI** es una película realizada para ayudar a prevenir la trata de personas. La película está compuesta por seis cortometrajes, cada uno de los cuales tiene su propio director, propuesta narrativa y visual, dura aproximadamente 15 minutos y aborda un tema distinto de la trata de personas: explotación sexual infantil, explotación laboral en el campo, menores en la delincuencia organizada, albergues disfuncionales, los familiares de las víctimas e internet como medio de captación de víctimas.

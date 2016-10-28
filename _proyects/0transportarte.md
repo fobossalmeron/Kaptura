@@ -12,4 +12,4 @@ en_solution: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem acc
 display_1: "transportarte2.jpg"
 display_2: "transportarte1.jpg"
 ---
-**Transportarte** busca contribuir a que los usuarios comprendan la importancia del buen comportamiento cívico dentro de las instalaciones del metro. El proyecto consiste en presentar actividades artísticas y de entretenimiento con mensajes, consejos y anécdotas de carácter cívico dentro de las instalaciones del STC Metro. Kaptura Projects se encarga de la producción audiovisual de las actividades con sus mensajes cívicos y de su difusión en las redes sociales.
+**TRANSPORTARTE** busca contribuir a que los usuarios comprendan la importancia del buen comportamiento cívico dentro de las instalaciones del metro. El proyecto consiste en presentar actividades artísticas y de entretenimiento con mensajes, consejos y anécdotas de carácter cívico dentro de las instalaciones del STC Metro. Kaptura Projects se encarga de la producción audiovisual de las actividades con sus mensajes cívicos y de su difusión en las redes sociales.

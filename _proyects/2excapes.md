@@ -5,7 +5,7 @@ es_title: "Excapes"
 es_subtitle: "<b>Serie web</b> <br>Género: reality - live"
 en_title: "Web-Serie Excapes"
 en_subtitle: "Excapes is a traveling web-serie"
-video: "https://www.youtube.com/embed/D5BoLNLLpxE?rel=0&amp;showinfo=0"
+video: "https://www.youtube.com/embed/D5BoLNLLpxE?rel=0&amp;showinfo=0&amp;start=3"
 es_brief: "El objetivo de Excapes es incentivar a los jóvenes a visitar aquellos lugares de México que aún no conocen y al mismo tiempo impulsar el desarrollo turístico y económico de los estados en los que se realiza el programa. Nuestro reto es captar el interés de los millennials que inconformes con los contenidos de la televisión abierta, prefieren consumir los productos audiovisuales por internet."
 en_brief: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis"
 es_solution: "La serie introduce al espectador en la vida de Manu a través de la grabación de sus viajes.
