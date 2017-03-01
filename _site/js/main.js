@@ -91,7 +91,7 @@ $(document).ready(function() {
 
 
 //Maps
-function initialize() {
+function initMap() {
   var kaptura  = new google.maps.LatLng(19.352037, -99.151034);
   var kapturaOptions = {
     zoom: 16,
@@ -198,4 +198,4 @@ function initialize() {
   });
 };
 
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
