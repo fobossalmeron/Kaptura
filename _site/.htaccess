@@ -6,7 +6,7 @@ RedirectMatch 301 ^/_site/(.*)$ http://kapturaprojects.com/
 
 AddDefaultCharset UTF-8
 
-ErrorDocument 404 /404/
+# ErrorDocument 404 /404/
 
 # 3 WEEKS
 <FilesMatch "\.(jpg|svg|png|ico)$">
