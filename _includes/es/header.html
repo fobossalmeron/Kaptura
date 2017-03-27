@@ -1,4 +1,5 @@
-{% include menuicon.html %}
+<!--{% include menuicon.html %}-->
+<button class="newmenu">menu</button>
 {% include menumobile.html %}
 <header class="site-header">
 	<img class="headerlogo" src="{{ site.baseurl }}images/layout/logo.svg">
@@ -7,12 +8,25 @@
     <a class="page-link" href="{{ if page.menu == 'offhomepage'}}{{site.baseurl}}{{% endif %}}#portafolio">Últimos proyectos</a>
     <a class="page-link" href="{{ if page.menu == 'offhomepage'}}{{site.baseurl}}{{% endif %}}#nosotros">Sobre nosotros</a>
     <a class="page-link" href="{{ if page.menu == 'offhomepage'}}{{site.baseurl}}{{% endif %}}#contacto">Contáctanos</a>
-  <!--  <a class="page-link" href="{{site.baseurl}}rentadeequipo/">Renta de equipo</a>-->
   </nav>
-<!--
-  <div class="language">
-    <a class="language-link" href="{{ site.baseurl }}"><b>Español</b></a>
-    <a class="language-link" href="{{ site.baseurl }}en/">English</a>
-  </div>-->
 </header>
 <div class="cover"></div>
+
+<script>
+	// init controller
+	//var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter"}});
+	// build scenes
+	//new ScrollMagic.Scene({triggerElement: "#portafolio"})
+	//				.addClass("#{{proyect.selector}}1 > div", {y: "100%", ease: Linear.easeNone})
+		//		.addIndicators()
+	//				.addTo(controller);
+	//new ScrollMagic.Scene({triggerElement: "#{{proyect.selector}}2"})
+//					.setTween("#{{proyect.selector}}2 > div", {y: "100%", ease: Linear.easeNone})
+			//	.addIndicators()
+//					.addTo(controller);
+					/*
+	new ScrollMagic.Scene({triggerElement: "#parallax3"})
+					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);*/
+</script>

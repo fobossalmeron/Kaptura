@@ -9,7 +9,7 @@
   <title>Kaptura Projects</title>
   <meta name="description" content="Kaptura Projects es una productora de audiovisuales en la CDMX.">
 
-  <meta property="og:url" content="http://kapturaprojects.com/">
+  <meta property="og:url" content="http://localhost:4000/">
   <meta property="og:site_name" content="Kaptura Projects" />
   <meta property="og:type" content="website">
   <meta property="og:title" content="Kaptura Projects">
@@ -19,8 +19,8 @@
   <meta property="og:locale:alternate" content="es_ES" />
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://kapturaprojects.com//">
-  <link rel="alternate" type="application/rss+xml" title="Kaptura Projects" href="http://kapturaprojects.com//feed.xml">
+  <link rel="canonical" href="http://localhost:4000//">
+  <link rel="alternate" type="application/rss+xml" title="Kaptura Projects" href="http://localhost:4000//feed.xml">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
@@ -48,13 +48,13 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:300,400,700|Fira+Sans:300,500' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Fira+Sans:300,500' rel='stylesheet' type='text/css'>
 </head>
 
 
   <body>
 
-    <svg class="menuicon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <!--<svg class="menuicon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="50.333px" height="113.667px" viewBox="0 0 50.333 113.667" enable-background="new 0 0 50.333 113.667"
 	 xml:space="preserve">
 <polygon fill="#141414" points="0,13.333 50.333,0 50.333,100.667 0,113.667 "/>
@@ -62,7 +62,8 @@
 <line class="midline" fill="none" stroke="#FCFCFC" stroke-width="3" stroke-miterlimit="10" x1="7.719" y1="56.341" x2="43.883" y2="56.341"/>
 <line class="secondline" fill="none" stroke="#FCFCFC" stroke-width="3" stroke-miterlimit="10" x1="7.719" y1="67.816" x2="43.883" y2="67.816"/>
 </svg>
-
+-->
+<button class="newmenu">menu</button>
 <svg class="menuicon menumobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="113.666px" height="50.333px" viewBox="0 0 113.666 50.333" enable-background="new 0 0 113.666 50.333"
 	 xml:space="preserve">
@@ -79,18 +80,32 @@
     <a class="page-link" href="/#portafolio">Últimos proyectos</a>
     <a class="page-link" href="/#nosotros">Sobre nosotros</a>
     <a class="page-link" href="/#contacto">Contáctanos</a>
-  <!--  <a class="page-link" href="/rentadeequipo/">Renta de equipo</a>-->
   </nav>
-<!--
-  <div class="language">
-    <a class="language-link" href="/"><b>Español</b></a>
-    <a class="language-link" href="/en/">English</a>
-  </div>-->
 </header>
 <div class="cover"></div>
 
+<script>
+	// init controller
+	//var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter"}});
+	// build scenes
+	//new ScrollMagic.Scene({triggerElement: "#portafolio"})
+	//				.addClass("#1 > div", {y: "100%", ease: Linear.easeNone})
+		//		.addIndicators()
+	//				.addTo(controller);
+	//new ScrollMagic.Scene({triggerElement: "#2"})
+//					.setTween("#2 > div", {y: "100%", ease: Linear.easeNone})
+			//	.addIndicators()
+//					.addTo(controller);
+					/*
+	new ScrollMagic.Scene({triggerElement: "#parallax3"})
+					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);*/
+</script>
+
 
     <section id="inicio">
+<a class="fullref" href="#portafolio">
 	<svg class="logopage" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="153.334px" height="154.667px" viewBox="0 0 153.334 154.667" enable-background="new 0 0 153.334 154.667" xml:space="preserve">
 <g class="move_iris">
 	<g>
@@ -467,11 +482,9 @@
 </svg>
 
 	 <div class="language">
-		 <!--
-	    <a class="language-link" href="/"><b>Español</b></a>
-	    <a class="language-link" href="/en/">English</a>-->
 	    <a class="triangle" href="#portafolio"> </a>
 	 </div>
+	 </a>
 </section>
 
 <section id="portafolio">
@@ -499,20 +512,23 @@
 
 	
 		<div class="proyect">
+      <img class="main_image" src="/images/portfolio/excapes/excapes.svg" />
 			<div class="main_title">
-			    <h3>Excapes</h3>
-			    <p><b>Serie web</b> <br />Género: reality - live</p>
+			  <h3><b>PROD.</b> Excapes</h3>
+        
+			  <h4><b>FORMATO</b> Serie web <br /></h4>
+        
+			  <h4><b>GÉNERO</b> reality - live</h4>
+        
 			</div>
-			<div class="main_image">
-				<img class="insert" src="/images/portfolio/excapes/excapes.svg" />
-			</div>
+      <div class="columned">
+        <div class="thecolumn"></div>
+        <p><strong>EXCAPES</strong> es un reality show que busca grupos de amigos que quieran viajar juntos por México y apoyar a causas altruistas. A través de las redes sociales cualquier grupo que desee participar deberá competir  publicando un video en el cual expliquen de manera creativa por que quieren viajar con <strong>EXCAPES</strong>. Sumando likes se definirán seis equipos semifinalistas a los cuales se les realizará un minirreportaje en sus ciudades. El público votará por su equipo favorito y los tres más votados viajarán durante una semana a uno de los estados de la república. En dicho viaje, el público conocerá de primera mano los mejores lugares del estado y vivirán la experiencia junto con nuestros participantes. Durante el viaje los concursantes participarán en una causa eco-altruista, por medio de está se relacionan con locales y se logran momentos emotivos.</p>
+
+      </div>
       <div class="video_insert">
 			     <iframe src="https://www.youtube.com/embed/D5BoLNLLpxE?rel=0&amp;showinfo=0&amp;start=3" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
       </div>
-			<div class="columned">
-			<p><strong>EXCAPES</strong> es un proyecto transmedia que consta de una serie web que te invita a viajar con Manu y una guía que busca ayudarte a descubrir México. Nuestra intención es inspirar a los jóvenes a agarrar la mochila y salir a viajar. Manu tiene 28 años, acaban de despedirlo de su trabajo y en este momento está viajando. ¿La excusa que le impulsó a viajar? Encontró unas fotos de su papá, a quien nunca conoció y decidió ir a los lugares a donde él había viajado. Pero las fotos no dicen ni lugar, ni fecha. ¿Cómo encontrarlos? Nuestro equipo creativo  creó a Manu, un viajero con las mismas ganas de escapar que nosotros. Nuestra idea es grabar su experiencia para transmitir nuestras ansias de viajar a través de él.</p>
-
-			</div>
 
       <div id="excapes1" class="parallaxParent">
         <img id="covererexcapes1" class="coverer above-minitablet" src="/images/layout/singlelinegrid.svg" />
@@ -529,20 +545,28 @@
           parallaxresize("excapes", 1);
         });
       </script>
+      <div class="columnedbrief">
+        <div class="thecolumn"></div>
+  			<div class="brief">
+  				<h3>Objetivo</h3>
+  				<p>El objetivo de Excapes es incentivar a los jóvenes a visitar aquellos lugares de México que aún no conocen y al mismo tiempo impulsar el desarrollo turístico y económico de los estados en los que se realiza el programa. Nuestro reto es captar el interés de los millennials que inconformes con los contenidos de la televisión abierta, prefieren consumir los productos audiovisuales por internet.</p>
+  			</div>
+  			<div class="solution">
+  				<h3>Solución</h3>
+  				<p>EXCAPES involucra al espectador en la serie, dandole la posibilidad de interactuar con los viajeros, la posibilidad de ganarse un viaje y salir en los próximos  capítulos de EXCAPES. Esta interacción y la posibilidad de salir en la serie, generar una sensación de cercanía con el espectador permitiendo una relación estrecha entre EXCAPES y sus espectadores. Esta cercanía ayuda a generar sentimientos </p>
+  			</div>
+      </div>
 
-			<div class="brief">
-				<h3>Brief</h3>
-				<p>El objetivo de Excapes es incentivar a los jóvenes a visitar aquellos lugares de México que aún no conocen y al mismo tiempo impulsar el desarrollo turístico y económico de los estados en los que se realiza el programa. Nuestro reto es captar el interés de los millennials que inconformes con los contenidos de la televisión abierta, prefieren consumir los productos audiovisuales por internet.</p>
-			</div>
-			<div class="solution">
-				<h3>Solución</h3>
-				<p>La serie introduce al espectador en la vida de Manu a través de la grabación de sus viajes. El material está disponible en la web de Excapes, utilizando un formato de video corto, tanto para los capítulos, como para las cápsulas informativas. Cada destino consta de 4 capítulos de 10 minutos. Como extra se publican en la web cápsulas de 1 minuto de duración con material relacionado con la serie. </p>
-			</div>
+      
+      <div class="video_insert">
+			     <iframe src="https://www.youtube.com/embed/WrpzWNw4JKU?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+      
 
-      <div id="excapes2" class="parallaxParent">
-        <img id="covererexcapes2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg" />
-        <img id="covererexcapes2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
-      	<div class="parallaxChild" style="background-image: url(/images/portfolio/excapes/excapes2.jpg);"></div>
+  <!--    <div id="excapes2" class="parallaxParent">
+        <img id="covererexcapes2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg">
+        <img id="covererexcapes2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg">
+      	<div class="parallaxChild" style="background-image: url(/images/portfolio/excapes/excapes1.jpg);"></div>
       </div>
 
       <script>
@@ -552,7 +576,7 @@
       $( window ).resize(function() {
           parallaxresize("excapes", 2);
       });
-      </script>
+    </script>-->
 
       <script>
       	// init controller
@@ -574,23 +598,25 @@
       </script>
 
 			</div>
-<!--		</div>-->
 	
 		<div class="proyect">
+      <img class="main_image" src="/images/portfolio/setratadeti/setratadeti.svg" />
 			<div class="main_title">
-			    <h3><a href="http://tratadeti.org/" target="_blank">Se Trata de Ti</a></h3>
-			    <p><b>Documental sobre la trata de personas</b><br /> Duración 90 minutos</p>
+			  <h3><b>PROD.</b> <a href="http://tratadeti.org/" target="_blank">Se Trata de Ti</a></h3>
+        
+			  <h4><b>GÉNERO</b> Documental</h4>
+        
+			  <h4><b>DURACIÓn</b> 90 minutos</h4>
+        
 			</div>
-			<div class="main_image">
-				<img class="insert" src="/images/portfolio/setratadeti/setratadeti.svg" />
-			</div>
-      <div class="video_insert">
-			     <iframe src="https://www.youtube.com/embed/_l0jom-18d8?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-      </div>
-			<div class="columned">
-			<p><strong>SE TRATA DE TI</strong> es una película realizada para ayudar a prevenir la trata de personas. La película está compuesta por seis cortometrajes, cada uno de los cuales tiene su propio director, propuesta narrativa y visual, dura aproximadamente 15 minutos y aborda un tema distinto de la trata de personas: explotación sexual infantil, explotación laboral en el campo, menores en la delincuencia organizada, albergues disfuncionales, los familiares de las víctimas e internet como medio de captación de víctimas.</p>
+      <div class="columned">
+        <div class="thecolumn"></div>
+        <p><strong>SE TRATA DE TI</strong> es una película realizada para ayudar a prevenir la trata de personas. La película está compuesta por seis cortometrajes, cada uno de los cuales tiene su propio director, propuesta narrativa y visual, dura aproximadamente 15 minutos y aborda un tema distinto de la trata de personas: explotación sexual infantil, explotación laboral en el campo, menores en la delincuencia organizada, albergues disfuncionales, los familiares de las víctimas e internet como medio de captación de víctimas.</p>
 
-			</div>
+      </div>
+      <div class="video_insert">
+			     <iframe src="https://www.youtube.com/embed/k3jBenDRneM?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
 
       <div id="setratadeti1" class="parallaxParent">
         <img id="coverersetratadeti1" class="coverer above-minitablet" src="/images/layout/singlelinegrid.svg" />
@@ -607,19 +633,27 @@
           parallaxresize("setratadeti", 1);
         });
       </script>
+      <div class="columnedbrief">
+        <div class="thecolumn"></div>
+  			<div class="brief">
+  				<h3>Objetivo</h3>
+  				<p>El objetivo de “Se trata de tí” es la prevención de la trata de personas, por esta razón realizamos una película entretienida, que llama la atención, informa, conmueve e impacta a las víctimas potenciales, mostrando como detectar situaciones de peligro y tomar decisiones que los mantengan a salvo. Nuestra intención es proyectar está película en salas de cine y en todas las secundarias y preparatorias de México. Nuestro reto es captar la atención de los adolescentes para concientizarlos sobre el tema y lo vulnerables que se encuentran.</p>
+  			</div>
+  			<div class="solution">
+  				<h3>Solución</h3>
+  				<p>La película tiene una duración total de 90 minutos, pero al dividirse en seis cortos de 15 minutos, las escuelas y los profesores tienen la facilidad de presentar cada uno de los cortos y temas por separado. Además cada corto será acompañado de material didáctico que servirá a los profesores de herramienta para guiar las reflexiones de los adolescentes.</p>
+  			</div>
+      </div>
 
-			<div class="brief">
-				<h3>Brief</h3>
-				<p>El objetivo de “Se trata de tí” es la prevención de la trata de personas, por esta razón realizamos una película entretienida, que llama la atención, informa, conmueve e impacta a las víctimas potenciales, mostrando como detectar situaciones de peligro y tomar decisiones que los mantengan a salvo. Nuestra intención es proyectar está película en salas de cine y en todas las secundarias y preparatorias de México. Nuestro reto es captar la atención de los adolescentes para concientizarlos sobre el tema y lo vulnerables que se encuentran.</p>
-			</div>
-			<div class="solution">
-				<h3>Solución</h3>
-				<p>La película tiene una duración total de 90 minutos, pero al dividirse en seis cortos de 15 minutos, las escuelas y los profesores tienen la facilidad de presentar cada uno de los cortos y temas por separado. Además cada corto será acompañado de material didáctico que servirá a los profesores de herramienta para guiar las reflexiones de los adolescentes.</p>
-			</div>
+      
+      <div class="video_insert">
+			     <iframe src="https://www.youtube.com/embed/haTUwcsjBCY?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+      
 
-      <div id="setratadeti2" class="parallaxParent">
-        <img id="coverersetratadeti2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg" />
-        <img id="coverersetratadeti2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
+  <!--    <div id="setratadeti2" class="parallaxParent">
+        <img id="coverersetratadeti2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg">
+        <img id="coverersetratadeti2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg">
       	<div class="parallaxChild" style="background-image: url(/images/portfolio/setratadeti/setratadeti2.jpg);"></div>
       </div>
 
@@ -630,7 +664,7 @@
       $( window ).resize(function() {
           parallaxresize("setratadeti", 2);
       });
-      </script>
+    </script>-->
 
       <script>
       	// init controller
@@ -652,23 +686,25 @@
       </script>
 
 			</div>
-<!--		</div>-->
 	
 		<div class="proyect">
+      <img class="main_image" src="/images/portfolio/transportarte/transportarte.svg" />
 			<div class="main_title">
-			    <h3><a href="http://transportarte.com.mx/" target="_blank">TRANSPORTARTE</a></h3>
-			    <p><b>Video clips, reportajes y live streams</b> <br />Duración: 3 meses con filmaciones diarias</p>
+			  <h3><b>PROD.</b> <a href="http://transportarte.com.mx/" target="_blank">TRANSPORTARTE</a></h3>
+        
+			  <h4><b>FORMATO</b> Video clips, reportajes y live streams</h4>
+        
+			  <h4><b>Duración</b> 3 meses con filmaciones diarias</h4>
+        
 			</div>
-			<div class="main_image">
-				<img class="insert" src="/images/portfolio/transportarte/transportarte.svg" />
-			</div>
+      <div class="columned">
+        <div class="thecolumn"></div>
+        <p><strong>TRANSPORTARTE</strong> busca contribuir a que los usuarios comprendan la importancia del buen comportamiento cívico dentro de las instalaciones del <strong>STC Metro</strong>. El proyecto consiste en presentar actividades artísticas y de entretenimiento con mensajes, consejos y anécdotas de carácter cívico dentro de las instalaciones del Metro. El equipo de Kaptura Projects ha realizado más de 300 videos para Transportarte ademas de manejar las redes sociales del proyecto, logrando un alcance de más de 2 millón de usuarios.</p>
+
+      </div>
       <div class="video_insert">
 			     <iframe src="https://www.youtube.com/embed/EaKrQNKrOY4?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
       </div>
-			<div class="columned">
-			<p><strong>TRANSPORTARTE</strong> busca contribuir a que los usuarios comprendan la importancia del buen comportamiento cívico dentro de las instalaciones del metro. El proyecto consiste en presentar actividades artísticas y de entretenimiento con mensajes, consejos y anécdotas de carácter cívico dentro de las instalaciones del STC Metro. Kaptura Projects se encarga de la producción audiovisual de las actividades con sus mensajes cívicos y de su difusión en las redes sociales.</p>
-
-			</div>
 
       <div id="transportarte1" class="parallaxParent">
         <img id="coverertransportarte1" class="coverer above-minitablet" src="/images/layout/singlelinegrid.svg" />
@@ -685,19 +721,27 @@
           parallaxresize("transportarte", 1);
         });
       </script>
+      <div class="columnedbrief">
+        <div class="thecolumn"></div>
+  			<div class="brief">
+  				<h3>Objetivo</h3>
+  				<p>El objetivo de Transportarte es transmitir al usuario del STC Metro los beneficios de un buen comportamiento cívico dentro del metro. El reto es captar la atención  de los usuarios con estas actividades para propiciar que estén receptivos a los mensajes que queremos transmitirles.</p>
+  			</div>
+  			<div class="solution">
+  				<h3>Solución</h3>
+  				<p>Para cumplic con las necesidades del proyecto, Kaptura Projects desarrollan 4 tipos distintos de videos: livestreams, video-resúmenes de lo mejor de cada presentación, videos con consejos cívicos y videoclips para músicos destacados. Todos estós videos tienen contenido de entretenimiento y mensajes cívicos.</p>
+  			</div>
+      </div>
 
-			<div class="brief">
-				<h3>Brief</h3>
-				<p>El objetivo de Transportarte es transmitir al usuario del STC Metro los beneficios de un buen comportamiento cívico dentro del metro. El reto es captar la atención  de los usuarios con estas actividades para propiciar que estén receptivos a los mensajes que queremos transmitirles.</p>
-			</div>
-			<div class="solution">
-				<h3>Solución</h3>
-				<p>Para cumplic con las necesidades del proyecto, Kaptura Projects desarrollan 4 tipos distintos de videos: livestreams, video-resúmenes de lo mejor de cada presentación, videos con consejos cívicos y videoclips para músicos destacados. Todos estós videos tienen contenido de entretenimiento y mensajes cívicos.</p>
-			</div>
+      
+      <div class="video_insert">
+			     <iframe src="https://www.youtube.com/embed/rYEdw3taNqI?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+      
 
-      <div id="transportarte2" class="parallaxParent">
-        <img id="coverertransportarte2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg" />
-        <img id="coverertransportarte2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
+  <!--    <div id="transportarte2" class="parallaxParent">
+        <img id="coverertransportarte2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg">
+        <img id="coverertransportarte2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg">
       	<div class="parallaxChild" style="background-image: url(/images/portfolio/transportarte/transportarte1.jpg);"></div>
       </div>
 
@@ -708,7 +752,7 @@
       $( window ).resize(function() {
           parallaxresize("transportarte", 2);
       });
-      </script>
+    </script>-->
 
       <script>
       	// init controller
@@ -730,7 +774,6 @@
       </script>
 
 			</div>
-<!--		</div>-->
 	
   </main>
 </section>
@@ -741,13 +784,13 @@
 </div>
   <main>
 	<h2>Sobre nosotros</h2>
-  <h3>La productora </h3>
+  <h3>La productora</h3>
     <p>
-      Kaptura existe para producir ideas brillantes. La productora nace de los deseos de
+      <b>Kaptura</b> existe para producir ideas brillantes. La productora nace de los deseos de
       un grupo de jóvenes especialistas en el campo audiovisual que buscan generar proyectos
       que impacten en el público.
     </p>
-  <h3>¿Qué te ofrece Kaptura?</h3>
+  <h3>¿Qué te ofrece <b>Kaptura</b>?</h3>
     <p>
       Si quieres llevar a cabo un proyecto audiovisual Kaptura puede ayudarte en
       todo su proceso desde la concepción de la idea hasta el último proceso de post-producción,
@@ -888,61 +931,6 @@
 	          </a>
             
             
-            
-            
-	        </div>
-		</li>
-		
-		<li>
-			<div class="display profilecard">
-				<span class="colorize" style="background-image:url(/images/members/carolina.png)"></span>
-				<span class="colorizephoto" style="background-image:url(/images/members/carolina.png)"></span>
-			</div>
-			<h3>Carolina Plata </h3>
-			<p>Guión</p>
-	        <div class="social_blocklist">
-            
-	          <a target="_blank" href="mailto:carolina.plata@kapturaprojects.com">
-	          	<span class="social_icon_white"><svg class="social_icon email" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
-			<path fill="#141414" stroke="#FCFCFC" stroke-width="8" stroke-miterlimit="10" d="M181.362,58.392
-				c0-3.42-1.351-6.513-3.506-8.872c-0.035-0.046-0.045-0.1-0.079-0.149c-0.038-0.042-0.087-0.058-0.126-0.098
-				c-2.451-2.562-5.904-4.182-9.746-4.182H34.667c-3.843,0-7.294,1.621-9.751,4.184c-0.036,0.04-0.089,0.053-0.124,0.098
-				c-0.04,0.047-0.049,0.102-0.084,0.149c-2.149,2.359-3.5,5.449-3.5,8.869v78.395c0,3.501,1.407,6.667,3.654,9.048
-				c0.045,0.048,0.06,0.108,0.108,0.157c0.016,0.014,0.035,0.018,0.052,0.036c2.449,2.495,5.861,4.057,9.646,4.057h133.239
-				c3.786,0,7.199-1.562,9.645-4.062c0.019-0.014,0.04-0.018,0.056-0.031c0.045-0.049,0.06-0.105,0.102-0.153
-				c2.252-2.379,3.658-5.546,3.658-9.052L181.362,58.392L181.362,58.392z M128.943,93.444l46.155-38.269
-				c0.453,0.983,0.718,2.067,0.718,3.216v78.395c0,1.035-0.214,2.021-0.587,2.932L128.943,93.444z M167.906,50.574
-				c1.162,0,2.262,0.263,3.253,0.709l-69.874,57.937L31.409,51.284c0.998-0.444,2.096-0.709,3.256-0.709H167.906z M27.343,139.712
-				c-0.374-0.905-0.588-1.893-0.588-2.931v-78.39c0-1.149,0.268-2.233,0.72-3.216L73.63,93.444L27.343,139.712z M34.667,144.601
-				c-1.278,0-2.475-0.336-3.545-0.868l46.772-46.756l21.611,17.921c0.512,0.429,1.147,0.644,1.78,0.644
-				c0.633,0,1.269-0.215,1.78-0.644l21.61-17.921l46.771,46.756c-1.07,0.532-2.263,0.868-3.544,0.868H34.667L34.667,144.601z" />
-</svg>
-</span>
-	          </a>
-            
-            
-            
-	          <a target="_blank" href="https://www.instagram.com/carol_plata/">
-	            <span class="social_icon_white"><?xml version="1.0" encoding="utf-8"?>
-<svg class="social_icon instagram" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-49 -25 200 200" style="enable-background:new -49 -25 200 200;" xml:space="preserve">
-<g>
-	<path d="M52,0.5c24.2,0,27.2,0,36.8,0.5c8.9,0.5,13.7,1.8,16.9,3.2c4.3,1.6,7.3,3.7,10.5,6.9s5.3,6.2,6.9,10.5
-		c1.1,3.2,2.7,8,3.2,16.9c0.5,9.6,0.5,12.6,0.5,36.8c0,24.2,0,27.2-0.5,36.8c-0.5,8.9-1.8,13.7-3.2,16.9c-1.6,4.3-3.7,7.3-6.9,10.5
-		c-3.2,3.2-6.2,5.3-10.5,6.9c-3.2,1.1-8,2.7-16.9,3.2c-9.6,0.5-12.6,0.5-36.8,0.5s-27.2,0-36.8-0.5c-8.9-0.5-13.7-1.8-16.9-3.2
-		c-4.3-1.6-7.3-3.7-10.5-6.9c-3.2-3.2-5.3-6.2-6.9-10.5c-1.1-3.2-2.7-8-3.2-16.9c-0.5-9.6-0.5-12.6-0.5-36.8c0-24.2,0-27.2,0.5-36.8
-		c0.5-8.9,1.8-13.7,3.2-16.9c1.6-4.3,3.7-7.3,6.9-10.5S-6,5.8-1.7,4.2C1.5,3,6.3,1.4,15.2,1C24.8,0.5,27.8,0.5,52,0.5 M52-15.9
-		c-24.7,0-27.9,0-37.4,0.5C4.9-15-1.7-13.4-7.6-11.4c-5.9,2.3-11,5.5-16,10.5s-8.2,10-10.5,16c-2.3,5.7-3.9,12.3-4.1,22.1
-		c-0.5,9.6-0.5,12.8-0.5,37.4c0,24.7,0,27.9,0.5,37.4s2.1,16.2,4.1,22.1c2.3,5.9,5.5,11,10.5,16c5,5,10,8.2,16,10.5
-		c5.7,2.3,12.3,3.9,22.1,4.1c9.6,0.5,12.8,0.5,37.4,0.5s27.9,0,37.4-0.5s16.2-2.1,22.1-4.1c5.9-2.3,11-5.5,16-10.5
-		c5-5,8.2-10,10.5-16c2.3-5.7,3.9-12.3,4.1-22.1c0.5-9.6,0.5-12.8,0.5-37.4c0-24.7,0-27.9-0.5-37.4c-0.5-9.6-2.1-16.2-4.1-22.1
-		c-2.3-5.9-5.5-11-10.5-16c-5-5-10-8.2-16-10.5c-5.7-2.3-12.3-3.9-22.1-4.1C79.8-15.9,76.6-15.9,52-15.9L52-15.9z" />
-	<path d="M52,28.4c-25.8,0-46.6,21-46.6,46.6c0,25.6,21,46.6,46.6,46.6s46.6-21,46.6-46.6S77.8,28.4,52,28.4z M52,105.3
-		c-16.7,0-30.4-13.5-30.4-30.4c0-16.9,13.5-30.4,30.4-30.4c16.9,0,30.4,13.5,30.4,30.4C82.3,91.9,68.6,105.3,52,105.3z" />
-	<circle cx="100.4" cy="26.6" r="11" />
-</g>
-</svg>
-</span>
-	          </a>
             
             
 	        </div>

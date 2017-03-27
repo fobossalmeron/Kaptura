@@ -53,7 +53,7 @@ $(document).ready(function() {
   var querySelector = document.querySelector.bind(document);
 
   var allNav = querySelector('.site-header');
-  var menuIcon = querySelector('.menuicon');
+  var menuIcon = querySelector('.newmenu');
   var menuMobile = querySelector('.menumobile');
   var body = querySelector('body');
   var html = querySelector('html');
@@ -62,6 +62,7 @@ $(document).ready(function() {
 
   function closeMenu() {
     menuIcon.classList.remove('cross');
+    menuMobile.classList.remove('cross');
     allNav.classList.remove('openmenu');
     cover.classList.remove('appeared');
     cover.classList.remove('overlayed');
@@ -70,6 +71,7 @@ $(document).ready(function() {
 
   function toggleMenu(){
     menuIcon.classList.toggle('cross');
+    menuMobile.classList.toggle('cross');
     allNav.classList.toggle('openmenu');
     body.classList.toggle('preventscroll');
     cover.classList.toggle('appeared');

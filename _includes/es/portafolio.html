@@ -23,19 +23,20 @@
 
 	{% for proyect in site.proyects reversed %}
 		<div class="proyect">
+      <img class="main_image" src="{{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.logo}}">
 			<div class="main_title">
-			    <h3>{{ proyect.es_title }}</h3>
-			    <p>{{ proyect.es_subtitle }}</p>
+			  <h3><b>PROD.</b> {{ proyect.title }}</h3>
+        {% for sub in proyect.subtitles %}
+			  <h4>{{ sub.sub }}</h4>
+        {% endfor %}
 			</div>
-			<div class="main_image">
-				<img class="insert" src="{{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.logo}}">
-			</div>
+      <div class="columned">
+        <div class="thecolumn"></div>
+        {{ proyect.content }}
+      </div>
       <div class="video_insert">
 			     <iframe src="{{ proyect.video }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
-			<div class="columned">
-			{{ proyect.content }}
-			</div>
 
       <div id="{{proyect.selector}}1" class="parallaxParent">
         <img id="coverer{{proyect.selector}}1" class="coverer above-minitablet" src="{{site.baseurl}}images/layout/singlelinegrid.svg">
@@ -52,17 +53,25 @@
           parallaxresize("{{proyect.selector}}", 1);
         });
       </script>
+      <div class="columnedbrief">
+        <div class="thecolumn"></div>
+  			<div class="brief">
+  				<h3>Objetivo</h3>
+  				<p>{{ proyect.brief }}</p>
+  			</div>
+  			<div class="solution">
+  				<h3>Solución</h3>
+  				<p>{{ proyect.solution }}</p>
+  			</div>
+      </div>
 
-			<div class="brief">
-				<h3>Brief</h3>
-				<p>{{ proyect.es_brief}}</p>
-			</div>
-			<div class="solution">
-				<h3>Solución</h3>
-				<p>{{ proyect.es_solution}}</p>
-			</div>
+      {% if proyect.video2 %}
+      <div class="video_insert">
+			     <iframe src="{{ proyect.video2 }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+      {% endif %}
 
-      <div id="{{proyect.selector}}2" class="parallaxParent">
+  <!--    <div id="{{proyect.selector}}2" class="parallaxParent">
         <img id="coverer{{proyect.selector}}2" class="coverer above-minitablet" src="{{site.baseurl}}images/layout/doublelinegrid.svg">
         <img id="coverer{{proyect.selector}}2mob" class="coverer minitablet" src="{{site.baseurl}}images/layout/singlelinegridminitablet.svg">
       	<div class="parallaxChild" style="background-image: url({{site.baseurl}}images/portfolio/{{proyect.selector}}/{{proyect.display_2}});"></div>
@@ -75,7 +84,7 @@
       $( window ).resize(function() {
           parallaxresize("{{proyect.selector}}", 2);
       });
-      </script>
+    </script>-->
 
       <script>
       	// init controller
@@ -97,7 +106,6 @@
       </script>
 
 			</div>
-<!--		</div>-->
 	{% endfor %}
   </main>
 </section>

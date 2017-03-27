@@ -25,8 +25,6 @@
     position: relative;
     box-sizing: border-box;
     float: left;
-    left: 50%;
-    @include transform(translateX(-50%));
 
     span{
         float:left;
@@ -279,13 +277,37 @@
     @include transform(translateY(-50%));
     cursor: pointer;
     max-width: 50px;
-    width: 5%;
+}
+
+.newmenu{
+  position: fixed;
+  left: 0;
+  z-index: 7;
+  @include transform(translateY(-50%));
+  cursor: pointer;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  top:50%;
+  border-bottom: 4px solid $black;
+  background-color: transparent;
+  font-family: inherit;
+  text-transform: uppercase;
+  transform: rotate(-90deg)translateY(-25px);
+  width: 110px;
+  font-size: 19px;
+  text-align: left;
+  padding: 0;
+  &:focus{
+    outline:none;
+  }
 }
 
 .menumobile{
     top: 0px;
+    max-width: 90px;
     width: auto;
-    height: 45px;
+    height: auto;
     transform: translateX(-50%) translateY(0);
     left: 50%;
     display:none;
@@ -343,18 +365,18 @@
     .page-link {
         color: $black;
         line-height: $base-line-height;
-        font-family: 'Oswald', sans-serif;
+        font-family: 'Open Sans Condensed', sans-serif;
         box-sizing: border-box;
-        font-weight: 300;
+        font-weight: 700;
         text-transform: uppercase;
-        letter-spacing:3px;
-        font-size: 1.2em;
-        padding: 6px;
+        letter-spacing:1px;
+        font-size: 1.5em;
+        padding: 8px;
         width: 100%;
         float: left;
         clear: both;
         display: block;
-        text-align: center;
+        text-align: left;
         @include transition(.2s, ease);
 
         &:hover{
@@ -366,15 +388,10 @@
 }
 
 .language{
-    float: left;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size: 1.2em;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 3%;
+  left: 50%;
+  bottom: 10%;
+  position: absolute;
+  @include transform(translateX(-50%));
 
     a{
         color:$black;
@@ -407,13 +424,12 @@ section{
 }
 
 h2{
-    width:100%;
-    padding:15%;
-    text-align: center;
-    font-weight: 400;
-    letter-spacing: .3em;
-    margin-bottom: 0;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 15% 15% 0 0;
+  border-bottom: 4px solid;
+  text-align: left;
+  margin-bottom: 15%;
+  box-sizing: border-box;
 }
 
 /*
@@ -466,12 +482,13 @@ h2{
 }
 
 .logopage{
-    width: 30%;
+    width: 90%;
+    max-width:360px;
     height: 60%;
     left: 50%;
     @include transform(translateX(-50%));
     position: relative;
-    margin-top: 50px;
+    margin-top: 10%;
     z-index: 2;
 }
 
@@ -546,7 +563,7 @@ h2{
  * Portafolio
  */
 
-$clacket-width: 1px;
+$clacket-width: 4px;
 
 #portafolio{
     background-color: $white;
@@ -556,25 +573,25 @@ $clacket-width: 1px;
     min-height: 100%;
 
     h2{
-        color: $black;
+      color: $black;
     }
 
-    h3{
-        padding: 5%;
-        width:100%;
-        text-align: center;
-        margin-bottom: 0;
-        line-height: 1.1em;
-        font-size: 2.5em;
-        box-sizing: border-box;
+    h3, h4{
+      padding: 1% 0;
+      width: 100%;
+      border-bottom: 4px solid $black;
+      text-align: left;
+      margin-bottom: 0;
+      line-height: 1.1em;
+      box-sizing: border-box;
     }
 
     p{
         float: left;
         width: 100%;
         margin-bottom: 0;
-        padding: 10% 12%;
-        text-align: center;
+        text-align: justify;
+        padding-top: 3%;
     }
     .main_title{
         p{
@@ -647,22 +664,58 @@ $clacket-width: 1px;
     float:left;
     width:50%;
     box-sizing: border-box;
+    h3{
+      font-weight: 700;
+    }
 }
 
 .columned{
-    p{
+  position:relative;
+  display:block;
+  float:left;
+  p{
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
-    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 40px; /* Firefox */
-    column-gap: 40px;
+    -webkit-column-gap: 100px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 100px; /* Firefox */
+    column-gap: 100px;
     }
+
+  .thecolumn{
+    width:4px;
+    height:100%;
+    display:block;
+    background-color: $black;
+    left:50%;
+    @include transform(translateX(-50%));
+    position:absolute;
+  }
+}
+
+.columnedbrief{
+  position:relative;
+  display:block;
+  float:left;
+  div{
+    width:50%;
+    text-align: justify;
+  }
+  .thecolumn{
+    width:4px;
+    height: 78%;
+    top: 50px;
+    display:block;
+    background-color: $black;
+    left:50%;
+    @include transform(translateX(-50%));
+    position:absolute;
+  }
 }
 
 .proyect{
     float:left;
-    margin-bottom: 10%;
+    margin-bottom: 30%;
 }
 
 .single_line{
@@ -705,35 +758,33 @@ $clacket-width: 1px;
     }
 }
 
-.brief, .solution{
+.brief{
+  p{
+    padding-right: 10%;
+    padding-top: 6% !important;
+  }
+}
 
-    h3{
-        left:50%;
-        @include transform(translateX(-50%));
-        position:relative;
-    }
-
-    p{
-        padding: 2% !important;
-        max-width: 360px;
-        clear: both;
-        left: 50%;
-        @include transform(translateX(-50%));
-        position: relative;
-        margin-bottom: 8% !important;
-        text-align: center;
-    }
+.solution{
+  p{
+    padding-left:10%;
+    padding-top: 6% !important;
+  }
+  h3{
+    padding-left:10% !important;
+  }
 }
 
 .main_image{
-    width: 50%;
-    border-left: $clacket-width $dirtywhite solid;
-    border-top: $clacket-width $dirtywhite solid;
-    box-sizing: border-box;
-    padding: 2%;
-    height: 200px;
-    float: left;
-    height:auto;
+  width: 60%;
+  box-sizing: border-box;
+  left: 50%;
+  float: left;
+  clear: both;
+  height: auto;
+  @include transform(translateX(-50%));
+  position: relative;
+  margin-bottom: 5%;
 }
 
 .video_insert{
@@ -755,16 +806,13 @@ $clacket-width: 1px;
   }
 }
 .main_title{
-    width: 50%;
-    padding:2%;
-    border-top: $clacket-width $dirtywhite solid;
-    box-sizing: border-box;
+    width: 100%;
     float:left;
 }
 
 .insert{
     width:100%;
-        padding-bottom: 15%;
+        padding-bottom: 5%;
 }
 
 iframe{
@@ -790,26 +838,23 @@ iframe{
     color: $white;
     h2{
         color: $white;
-        font-weight: 400;
     }
 
     h3{
-        text-align: center;
+        text-align: left;
         font-size: 25px;
-        font-weight: 200;
         width: 100%;
         box-sizing: border-box;
-        padding: 0 15%;
     }
 
     p{
         float: left;
         width: 100%;
         box-sizing: border-box;
-        border-top: $clacket-width $dirtyblack solid;
+        border-top: $clacket-width $white solid;
         margin-bottom: 0;
         padding: 5% 22%;
-        text-align: center;
+        text-align: left;
         line-height: 1.6;
 
     }
@@ -833,13 +878,13 @@ iframe{
         margin:0;
 
         li{
-            width: 28.3%;
+            width: 20%;
             float:left;
             box-sizing: border-box;
             margin-right: 5%;
             padding: 3%;
 
-            &:nth-child(3n+3){
+            &:nth-child(4n+4){
                 margin-right:0px;
             }
 
@@ -901,7 +946,7 @@ iframe{
 
     h2{
         color: $black;
-        border-bottom: $clacket-width $dirtywhite solid;
+        border-bottom: $clacket-width $black solid;
         width: 100%;
     }
 
@@ -942,6 +987,14 @@ iframe{
 
 #freelancercontact{
     padding-right: 0px !important;
+}
+
+.fullref{
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  position: absolute;
+  cursor: default;
 }
 
 form{
@@ -1168,10 +1221,6 @@ footer{
         padding-top:25%;
     }
 
-    .logopage{
-        width: 40%;
-    }
-
     main{
         width:90%;
     }
@@ -1226,6 +1275,10 @@ footer{
 
 @include media-query($mobile){
 
+    .logopage{
+      margin-top:20%;
+    }
+
     #contacto .social_blocklist {
     padding-right: 0%;
     }
@@ -1263,9 +1316,7 @@ footer{
     .display_container{
         padding: 10% 0 55% 0;
     }
-    .logopage{
-        width: 60%;
-    }
+
     .main_title{
         width:100%;
     }
@@ -1322,9 +1373,7 @@ footer{
 }
 
 @include media-query($mini-mobile){
-    .logopage{
-        width:90%;
-    }
+
     .display span {
         min-height: 200px;
     }
