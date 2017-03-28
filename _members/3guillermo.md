@@ -1,5 +1,5 @@
 ---
-name: "Guillermo Mendiguren"
+name: "<b>Guillermo</b> Mendiguren"
 es_description: "Producción"
 en_description: "Producer"
 profile: "guillermo.png"

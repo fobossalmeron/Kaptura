@@ -1,5 +1,5 @@
 ---
-name: "Bernardo de Urquidi"
+name: "<b>Bernardo</b> de Urquidi"
 es_description: "Producción Ejecutiva"
 en_description: "Executive Producer"
 profile: "bernardo.png"

@@ -36,6 +36,7 @@ body {
     overflow-x: hidden;
 }
 
+$clacket-width: 4px;
 
 .stillbody{
     overflow:hidden;
@@ -79,7 +80,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin-left: none;
 }
 
 li {
@@ -95,7 +96,7 @@ li {
  * Headings
  */
 h1, h2, h5, h6 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: $title-font-family;
     font-weight: 700;
     text-transform: uppercase;
     padding-top: 20px;
@@ -106,7 +107,7 @@ h1, h2, h5, h6 {
 }
 
 h3, h4{
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: $title-font-family;
   text-transform: uppercase;
   font-weight: 500;
   padding-top: 20px;

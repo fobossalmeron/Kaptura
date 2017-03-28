@@ -1,5 +1,5 @@
 ---
-name: "Genaro Peñalosa"
+name: "<b>Genaro</b> Peñalosa"
 es_description: "Guión y Edición"
 en_description: "Script and edition"
 profile: "genaro.png"

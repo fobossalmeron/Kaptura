@@ -1,8 +1,5 @@
-<!--{% include menuicon.html %}-->
 <button class="newmenu">menu</button>
-{% include menumobile.html %}
 <header class="site-header">
-	<img class="headerlogo" src="{{ site.baseurl }}images/layout/logo.svg">
   <nav class="site-nav">
     <a class="page-link" href="{{ if page.menu == 'offhomepage'}}{{site.baseurl}}{{% endif %}}#inicio">Inicio</a>
     <a class="page-link" href="{{ if page.menu == 'offhomepage'}}{{site.baseurl}}{{% endif %}}#portafolio">Últimos proyectos</a>
@@ -11,22 +8,3 @@
   </nav>
 </header>
 <div class="cover"></div>
-
-<script>
-	// init controller
-	//var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter"}});
-	// build scenes
-	//new ScrollMagic.Scene({triggerElement: "#portafolio"})
-	//				.addClass("#{{proyect.selector}}1 > div", {y: "100%", ease: Linear.easeNone})
-		//		.addIndicators()
-	//				.addTo(controller);
-	//new ScrollMagic.Scene({triggerElement: "#{{proyect.selector}}2"})
-//					.setTween("#{{proyect.selector}}2 > div", {y: "100%", ease: Linear.easeNone})
-			//	.addIndicators()
-//					.addTo(controller);
-					/*
-	new ScrollMagic.Scene({triggerElement: "#parallax3"})
-					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
-					.addIndicators()
-					.addTo(controller);*/
-</script>

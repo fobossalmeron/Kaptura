@@ -1,7 +1,8 @@
 <section id="portafolio">
-<div class="diagonalcont">
-<div class="diagonalpos black"></div>
-</div>
+  <div class="diagonalcont">
+  <div class="diagonalpos black"></div>
+  <div class="diagonalback"></div>
+  </div>
   <main>
 	<h2>Últimos Proyectos</h2>
   <script>
@@ -10,7 +11,7 @@
     var size = $("#coverer" + proyectselector + number).height();
     var mobilesize = $("#coverer" + proyectselector + number + "mob").height();
 
-    if ($(window).width() < 800) {
+    if ($(window).width() < 700) {
     $("#" + proyectselector + number).css("height", mobilesize - 3);
 //    console.log("Height de minitablet y es " + mobilesize);
     }

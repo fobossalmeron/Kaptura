@@ -1,0 +1,183 @@
+@include media-query($small-desktop){
+
+  .footer-contact li {
+    width: 100%;
+    border: none;
+  }
+  #nosotros .members{
+       li{
+           width: 1px / 2.9px * 100%;
+           margin-left: 8%;
+
+           &:nth-child(2n+0){
+               margin-right:0px;
+           }
+       }
+       p{
+         padding: 5% 20%;
+       }
+     }
+}
+@include media-query($tablet){
+
+    .parallaxParent{
+      width: 80%;
+      margin: 10%;
+    }
+    .columned{
+      .thecolumn{
+        display:none;
+      }
+      p{
+        -webkit-column-count:1;
+        -moz-column-count:1;
+        column-count:1;
+      }
+    }
+    #nosotros .noscard{
+      width:100%;
+      padding:0;
+    }
+    .minitablet{
+      display:block;
+    }
+    .above-minitablet{
+      display:none;
+    }
+    .legales{
+      margin-top: 10%;
+      font-size: 13px;
+    }
+    .footer-contact li{
+    width: 100%;
+    padding: 2% 0;
+    }
+    .newmenu{
+      height: 140px;
+      width: 50px;
+    }
+    .logopage{
+      width: 75%;
+    }
+    #portafolio{
+      .brief p{
+        padding-right:0px;
+      }
+      .solution{
+        h3{
+          padding-left:0;
+        }
+        p{
+          padding-left:0;
+        }
+      }
+    }
+    .columnedbrief{
+      .thecolumn{
+        display: none;
+      }
+      div{
+          width:100%;
+      }
+    }
+}
+
+@include media-query($mobile){
+    section, .diagonalback, footer{
+      background-position: -10px center;
+    }
+    .logopage{
+      margin-top:20%;
+    }
+
+    #contacto .social_blocklist {
+    padding-right: 0%;
+    }
+
+    .display span{
+        background-attachment: initial;
+    }
+
+    #contacto h2{
+        font-size: 1.8em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    h2 {
+        padding: 40% 0 0 0;
+        font-size: 2.2em;
+    }
+
+    .menuicon{
+        display:none;
+    }
+    .menumobile{
+        display:block;
+    }
+
+    #freelancercontract{
+        padding-bottom: 30% !important;
+    }
+
+    .display_container{
+        padding: 10% 0 55% 0;
+    }
+
+    .main_title{
+        width:100%;
+    }
+    .main_image{
+        width:100%;
+        border:0;
+    }
+
+    #portafolio .display{
+        width:48%;
+    }
+
+    #nosotros p{
+        padding: 5% 5% !important;
+    }
+
+    #nosotros .members li{
+        width: 200px;
+        clear: both;
+        left: 50%;
+        position: relative;
+        @include transform(translateX(-50%));
+        margin-left:0px;
+    }
+
+    #contacto section{
+        width:100%;
+        padding: 5%;
+    }
+
+    .pastclients {
+        margin-bottom: 5%;
+        margin-left:0;
+        li{
+            width: 1px / 2px * 100%;
+
+                img{
+                    width:100%;
+                    padding:10%;
+                }
+                &:nth-child(3n+0){
+                    clear:both;
+                }
+            }
+
+    }
+}
+
+@include media-query($mini-mobile){
+
+    .display span {
+        min-height: 200px;
+    }
+    .insert {
+        padding-bottom: 0%;
+    }
+}

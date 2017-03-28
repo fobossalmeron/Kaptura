@@ -18,7 +18,7 @@ $(document).ready(function() {
         var targetOffset = $target.offset().top;
         $(this).click(function(event) {
           event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, 600, function() {
+          $(scrollElem).animate({scrollTop: targetOffset}, 1200, function() {
             location.hash = target;
           });
         });
@@ -52,37 +52,22 @@ $(document).ready(function() {
 
   var querySelector = document.querySelector.bind(document);
 
-  var allNav = querySelector('.site-header');
+  var allNav = querySelector('header');
   var menuIcon = querySelector('.newmenu');
-  var menuMobile = querySelector('.menumobile');
   var body = querySelector('body');
-  var html = querySelector('html');
-  var cover = querySelector('.cover');
 
 
   function closeMenu() {
-    menuIcon.classList.remove('cross');
-    menuMobile.classList.remove('cross');
     allNav.classList.remove('openmenu');
-    cover.classList.remove('appeared');
-    cover.classList.remove('overlayed');
     body.classList.remove('preventscroll');
   };
 
   function toggleMenu(){
-    menuIcon.classList.toggle('cross');
-    menuMobile.classList.toggle('cross');
     allNav.classList.toggle('openmenu');
     body.classList.toggle('preventscroll');
-    cover.classList.toggle('appeared');
-    setTimeout(function() {
-    cover.classList.toggle('overlayed');
-   }, 100);
   };
 
   menuIcon.addEventListener('click', toggleMenu);
-  menuMobile.addEventListener('click', toggleMenu);
-  cover.addEventListener('click', closeMenu);
 
   allNav.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {

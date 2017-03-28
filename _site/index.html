@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,7 @@
   <title>Kaptura Projects</title>
   <meta name="description" content="Kaptura Projects es una productora de audiovisuales en la CDMX.">
 
-  <meta property="og:url" content="http://localhost:4000/">
+  <meta property="og:url" content="http://kapturaprojects.com/">
   <meta property="og:site_name" content="Kaptura Projects" />
   <meta property="og:type" content="website">
   <meta property="og:title" content="Kaptura Projects">
@@ -19,8 +18,8 @@
   <meta property="og:locale:alternate" content="es_ES" />
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000//">
-  <link rel="alternate" type="application/rss+xml" title="Kaptura Projects" href="http://localhost:4000//feed.xml">
+  <link rel="canonical" href="http://kapturaprojects.com//">
+  <link rel="alternate" type="application/rss+xml" title="Kaptura Projects" href="http://kapturaprojects.com//feed.xml">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
@@ -51,30 +50,9 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Fira+Sans:300,500' rel='stylesheet' type='text/css'>
 </head>
 
-
   <body>
-
-    <!--<svg class="menuicon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="50.333px" height="113.667px" viewBox="0 0 50.333 113.667" enable-background="new 0 0 50.333 113.667"
-	 xml:space="preserve">
-<polygon fill="#141414" points="0,13.333 50.333,0 50.333,100.667 0,113.667 "/>
-<line class="firstline" fill="none" stroke="#FCFCFC" stroke-width="3" stroke-miterlimit="10" x1="7.719" y1="44.867" x2="43.883" y2="44.867"/>
-<line class="midline" fill="none" stroke="#FCFCFC" stroke-width="3" stroke-miterlimit="10" x1="7.719" y1="56.341" x2="43.883" y2="56.341"/>
-<line class="secondline" fill="none" stroke="#FCFCFC" stroke-width="3" stroke-miterlimit="10" x1="7.719" y1="67.816" x2="43.883" y2="67.816"/>
-</svg>
--->
-<button class="newmenu">menu</button>
-<svg class="menuicon menumobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="113.666px" height="50.333px" viewBox="0 0 113.666 50.333" enable-background="new 0 0 113.666 50.333"
-	 xml:space="preserve">
-<polygon fill="#141414" points="100.333,0 113.666,50.333 13,50.333 0,0 "/>
-<line class="firstline" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="39.385" y1="13.201" x2="75.55" y2="13.201"/>
-<line class="midline" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="39.385" y1="24.674" x2="75.55" y2="24.674"/>
-<line class="secondline" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="39.385" y1="36.149" x2="75.55" y2="36.149"/>
-</svg>
-
+    <button class="newmenu">menu</button>
 <header class="site-header">
-	<img class="headerlogo" src="/images/layout/logo.svg">
   <nav class="site-nav">
     <a class="page-link" href="/#inicio">Inicio</a>
     <a class="page-link" href="/#portafolio">Últimos proyectos</a>
@@ -83,26 +61,6 @@
   </nav>
 </header>
 <div class="cover"></div>
-
-<script>
-	// init controller
-	//var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter"}});
-	// build scenes
-	//new ScrollMagic.Scene({triggerElement: "#portafolio"})
-	//				.addClass("#1 > div", {y: "100%", ease: Linear.easeNone})
-		//		.addIndicators()
-	//				.addTo(controller);
-	//new ScrollMagic.Scene({triggerElement: "#2"})
-//					.setTween("#2 > div", {y: "100%", ease: Linear.easeNone})
-			//	.addIndicators()
-//					.addTo(controller);
-					/*
-	new ScrollMagic.Scene({triggerElement: "#parallax3"})
-					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
-					.addIndicators()
-					.addTo(controller);*/
-</script>
-
 
     <section id="inicio">
 <a class="fullref" href="#portafolio">
@@ -488,9 +446,10 @@
 </section>
 
 <section id="portafolio">
-<div class="diagonalcont">
-<div class="diagonalpos black"></div>
-</div>
+  <div class="diagonalcont">
+  <div class="diagonalpos black"></div>
+  <div class="diagonalback"></div>
+  </div>
   <main>
 	<h2>Últimos Proyectos</h2>
   <script>
@@ -499,7 +458,7 @@
     var size = $("#coverer" + proyectselector + number).height();
     var mobilesize = $("#coverer" + proyectselector + number + "mob").height();
 
-    if ($(window).width() < 800) {
+    if ($(window).width() < 700) {
     $("#" + proyectselector + number).css("height", mobilesize - 3);
 //    console.log("Height de minitablet y es " + mobilesize);
     }
@@ -527,7 +486,7 @@
 
       </div>
       <div class="video_insert">
-			     <iframe src="https://www.youtube.com/embed/D5BoLNLLpxE?rel=0&amp;showinfo=0&amp;start=3" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+			     <iframe src="https://www.youtube.com/embed/D5BoLNLLpxE?rel=0&amp;showinfo=0&amp;start=3&amp;wmode=opaque" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
       </div>
 
       <div id="excapes1" class="parallaxParent">
@@ -559,7 +518,7 @@
 
       
       <div class="video_insert">
-			     <iframe src="https://www.youtube.com/embed/WrpzWNw4JKU?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+			     <iframe src="https://www.youtube.com/embed/WrpzWNw4JKU?rel=0&amp;showinfo=0&amp;wmode=opaque" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
       </div>
       
 
@@ -637,7 +596,7 @@
         <div class="thecolumn"></div>
   			<div class="brief">
   				<h3>Objetivo</h3>
-  				<p>El objetivo de “Se trata de tí” es la prevención de la trata de personas, por esta razón realizamos una película entretienida, que llama la atención, informa, conmueve e impacta a las víctimas potenciales, mostrando como detectar situaciones de peligro y tomar decisiones que los mantengan a salvo. Nuestra intención es proyectar está película en salas de cine y en todas las secundarias y preparatorias de México. Nuestro reto es captar la atención de los adolescentes para concientizarlos sobre el tema y lo vulnerables que se encuentran.</p>
+  				<p>El objetivo de <b>Se Trata De Ti</b> es la prevención de la trata de personas, por esta razón realizamos una película entretienida, que llama la atención, informa, conmueve e impacta a las víctimas potenciales, mostrando como detectar situaciones de peligro y tomar decisiones que los mantengan a salvo. Nuestra intención es proyectar está película en salas de cine y en todas las secundarias y preparatorias de México. Nuestro reto es captar la atención de los adolescentes para concientizarlos sobre el tema y lo vulnerables que se encuentran.</p>
   			</div>
   			<div class="solution">
   				<h3>Solución</h3>
@@ -781,26 +740,27 @@
 <section id="nosotros">
 <div class="diagonalcont">
 <div class="diagonalpos"></div>
+<div class="diagonalback backwhite"></div>
 </div>
   <main>
-	<h2>Sobre nosotros</h2>
-  <h3>La productora</h3>
-    <p>
-      <b>Kaptura</b> existe para producir ideas brillantes. La productora nace de los deseos de
-      un grupo de jóvenes especialistas en el campo audiovisual que buscan generar proyectos
-      que impacten en el público.
-    </p>
-  <h3>¿Qué te ofrece <b>Kaptura</b>?</h3>
-    <p>
+	     <h2>Sobre nosotros</h2>
+    <div class="noscard">
+       <h3>La productora</h3>
+       <p>
+       <b>Kaptura</b> existe para producir ideas brillantes. La productora nace de los deseos de
+       un grupo de jóvenes especialistas en el campo audiovisual que buscan generar proyectos
+       que impacten en el público.
+      </p>
+    </div>
+    <div class="noscard">
+      <h3>¿Qué te ofrece <b>Kaptura</b>?</h3>
+      <p>
       Si quieres llevar a cabo un proyecto audiovisual Kaptura puede ayudarte en
       todo su proceso desde la concepción de la idea hasta el último proceso de post-producción,
       adecuándonos a tus necesidades. Incluso si necesitas equipo de cámara o equipo de sonido
       nosotros podemos ayudarte, escríbenos a <a target="_blank" href="mailto:contacto@kapturaprojects.com"><b>contacto</b>@kapturaprojects.com</a>
-      <!-- Además, si lo que quieres es hacer tus propios proyectos y lo que necesitas es equipo,
-      ¡Nosotros te ayudamos! Pásate por nuestra página de renta donde encontrarás equipo de cámara y sonido a precios accesibles.
-      <br>
-      <a href="/rentadeequipo/"><b>Renta tu equipo con nosotros!</b></a>-->
-    </p>
+      </p>
+   </div>
 	<ul class="members">
 		
 		<li>
@@ -808,7 +768,7 @@
 				<span class="colorize" style="background-image:url(/images/members/alayde.png)"></span>
 				<span class="colorizephoto" style="background-image:url(/images/members/alayde.png)"></span>
 			</div>
-			<h3>Alayde Castro </h3>
+			<h3><b>Alayde</b> Castro </h3>
 			<p>Dirección Creativa</p>
 	        <div class="social_blocklist">
             
@@ -863,7 +823,7 @@
 				<span class="colorize" style="background-image:url(/images/members/bernardo.png)"></span>
 				<span class="colorizephoto" style="background-image:url(/images/members/bernardo.png)"></span>
 			</div>
-			<h3>Bernardo de Urquidi </h3>
+			<h3><b>Bernardo</b> de Urquidi </h3>
 			<p>Producción Ejecutiva</p>
 	        <div class="social_blocklist">
             
@@ -908,7 +868,7 @@
 				<span class="colorize" style="background-image:url(/images/members/guillermo.png)"></span>
 				<span class="colorizephoto" style="background-image:url(/images/members/guillermo.png)"></span>
 			</div>
-			<h3>Guillermo Mendiguren </h3>
+			<h3><b>Guillermo</b> Mendiguren </h3>
 			<p>Producción</p>
 	        <div class="social_blocklist">
             
@@ -941,7 +901,7 @@
 				<span class="colorize" style="background-image:url(/images/members/genaro.png)"></span>
 				<span class="colorizephoto" style="background-image:url(/images/members/genaro.png)"></span>
 			</div>
-			<h3>Genaro Peñalosa </h3>
+			<h3><b>Genaro</b> Peñalosa </h3>
 			<p>Guión y Edición</p>
 	        <div class="social_blocklist">
             
@@ -976,6 +936,7 @@
 <section id="contacto">
 <div class="diagonalcont">
 <div class="diagonalpos black"></div>
+<div class="diagonalback"></div>
 </div>
   <main>
 	<h2>Contáctanos</h2>
@@ -1047,7 +1008,7 @@
             </a>
           </div>
     <p>Llámanos!</p>
-      <a href="tel:5543390298"><b>+52 (55) 43 39 02 98</b></a>
+      <a class="phone" href="tel:5543390298"><b>+52 (55) 43 39 02 98</b></a>
 	  <p>Y también puedes visitarnos en:</p>
 	    <div id="mapa"></div>
 	    <p><a target="_blank" href="https://www.google.com/maps/place/Villamar+18,+San+Diego+Churubusco,+04120+Ciudad+de+M%C3%A9xico,+D.F.,+M%C3%A9xico/@19.3520223,-99.1533351,17z/data=!3m1!4b1!4m2!3m1!1s0x85d1ffcdd89a6fab:0xe689585110f82cd7">Villamar 18, San Miguel Churubusco CP 01234,
@@ -1060,6 +1021,7 @@
     <footer class="site-footer">
 <div class="diagonalcont">
 <div class="diagonalpos"></div>
+<div class="diagonalback backwhite"></div>
 </div>
   <main>
   <div class="footer-section">
@@ -1139,11 +1101,8 @@
           </div>
     </li>
   </ul>
-    <a href="/">
-      <img class="footerlogo" src="/images/layout/logowhite.svg" alt="Kaptura Projects">
-    </a>
-      <p class="legales"><em><b>© Kaptura Projects</b> Todos los derechos reservados, 2017.<br>
-      Sitio diseñado y desarrollado por <a href="http://rodrigosalmeron.mx" target="_blank"><b>Rodrigo Salmerón</b>.</em></p>
+      <p class="legales"><em><b>© Kaptura Projects</b> Todos los derechos reservados, 2017.</em><br>
+      Sitio diseñado y desarrollado por <a href="http://rodrigosalmeron.mx" target="_blank"><b>Rodrigo Salmerón</b>.</p>
   </div>
 
   </main>
@@ -1153,7 +1112,5 @@
   </script>
 <script src="/js/main.js"></script>
 
-
   </body>
-
 </html>
