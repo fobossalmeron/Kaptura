@@ -32,6 +32,11 @@ body {
   height: 100%;
   overflow-x: hidden; }
 
+.wrrapper {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
 .stillbody {
   overflow: hidden; }
 

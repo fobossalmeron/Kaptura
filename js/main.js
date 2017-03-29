@@ -55,18 +55,23 @@ $(document).ready(function() {
   var allNav = querySelector('header');
   var menuIcon = querySelector('.newmenu');
   var body = querySelector('body');
+  var wrrapper = querySelector('.wrrapper');
 
 
   function closeMenu() {
     allNav.classList.remove('openmenu');
     body.classList.remove('preventscroll');
+    wrrapper.classList.remove('openbody');
     menuIcon.classList.remove('openbutton')
+    body.removeEventListener('touchstart', function(e){ e.preventDefault(); });
   };
 
   function toggleMenu(){
     allNav.classList.toggle('openmenu');
     menuIcon.classList.toggle('openbutton')
     body.classList.toggle('preventscroll');
+    body.addEventListener('touchstart', function(e){ e.preventDefault(); });
+    wrrapper.classList.toggle('openbody');
   };
 
   menuIcon.addEventListener('click', toggleMenu);
