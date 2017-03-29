@@ -420,18 +420,30 @@ header {
   left: 0;
   z-index: 7;
   cursor: pointer;
+  background-color: transparent;
   top: 50%;
   border: none;
   opacity: 0;
+  font-size: 0;
   width: 50px;
   height: 140px;
+  -webkit-transition: all 0.2s 0s ease;
+  -moz-transition: all 0.2s 0s ease;
+  -ms-transition: all 0.2s 0s ease;
+  -o-transition: all 0.2s 0s ease;
+  transition: all 0.2s 0s ease;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: 50%; }
   .newmenu:focus {
     outline: none; }
+
+.openbutton {
+  background-position: -30px; }
 
 .menumobile {
   top: 0px;
@@ -1067,8 +1079,7 @@ iframe {
     width: 100%;
     margin-bottom: 0; }
   #contacto p a {
-    color: #262626;
-    float: left; }
+    color: #262626; }
   #contacto .phone, #contacto p {
     clear: both;
     float: left;
@@ -1323,9 +1334,20 @@ footer {
   font-size: 24px; }
 
 @media screen and (max-width: 900px) {
+  section, .diagonalback, footer {
+    background-position: -10px center;
+    background-image: none !important; }
+
+  .newmenu {
+    background-image: url(/images/layout/menumobile.svg);
+    opacity: 1;
+    height: 140px;
+    width: 50px; }
+
   .footer-contact li {
     width: 100%;
-    border: none; }
+    border: none;
+    padding: 2% 0; }
 
   #nosotros .members li {
     width: 34.48276%;
@@ -1360,14 +1382,6 @@ footer {
     margin-top: 10%;
     font-size: 13px; }
 
-  .footer-contact li {
-    width: 100%;
-    padding: 2% 0; }
-
-  .newmenu {
-    height: 140px;
-    width: 50px; }
-
   .logopage {
     width: 75%; }
 
@@ -1383,9 +1397,6 @@ footer {
   .columnedbrief div {
     width: 100%; } }
 @media screen and (max-width: 600px) {
-  section, .diagonalback, footer {
-    background-position: -10px center; }
-
   .logopage {
     margin-top: 20%; }
 
@@ -1456,6 +1467,9 @@ footer {
       .pastclients li:nth-child(3n+0) {
         clear: both; } }
 @media screen and (max-width: 450px) {
+  .footer-contact li p {
+    font-size: 1em; }
+
   .display span {
     min-height: 200px; }
 

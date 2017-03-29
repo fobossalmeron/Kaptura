@@ -60,10 +60,12 @@ $(document).ready(function() {
   function closeMenu() {
     allNav.classList.remove('openmenu');
     body.classList.remove('preventscroll');
+    menuIcon.classList.remove('openbutton')
   };
 
   function toggleMenu(){
     allNav.classList.toggle('openmenu');
+    menuIcon.classList.toggle('openbutton')
     body.classList.toggle('preventscroll');
   };
 

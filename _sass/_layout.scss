@@ -264,16 +264,26 @@ header {
   left: 0;
   z-index: 7;
   cursor: pointer;
+  background-color: transparent;
   top: 50%;
   border: none;
   opacity: 0;
+  font-size: 0;
   width: 50px;
   height: 140px;
+  @include transition(.2s, ease);
   @include transform(translateY(-50%));
+
+  background-repeat: no-repeat;
+  background-position: 50%;
 
   &:focus{
     outline:none;
   }
+}
+
+.openbutton{
+  background-position: -30px;
 }
 
 .menumobile{
@@ -939,7 +949,7 @@ iframe{
 
     p a{
         color: $dirtyblack;
-        float:left;
+
     }
     .phone,p{
       clear:both;

@@ -7,8 +7,8 @@ subtitles:
   - sub: "<b>GÉNERO</b> reality - live"
 video: "https://www.youtube.com/embed/D5BoLNLLpxE?rel=0&amp;showinfo=0&amp;start=3&amp;wmode=opaque"
 video2: "https://www.youtube.com/embed/WrpzWNw4JKU?rel=0&amp;showinfo=0&amp;wmode=opaque"
-brief: "El objetivo de Excapes es incentivar a los jóvenes a visitar aquellos lugares de México que aún no conocen y al mismo tiempo impulsar el desarrollo turístico y económico de los estados en los que se realiza el programa. Nuestro reto es captar el interés de los millennials que inconformes con los contenidos de la televisión abierta, prefieren consumir los productos audiovisuales por internet."
-solution: "EXCAPES involucra al espectador en la serie, dandole la posibilidad de interactuar con los viajeros, la posibilidad de ganarse un viaje y salir en los próximos  capítulos de EXCAPES. Esta interacción y la posibilidad de salir en la serie, generar una sensación de cercanía con el espectador permitiendo una relación estrecha entre EXCAPES y sus espectadores. Esta cercanía ayuda a generar sentimientos "
+brief: "El objetivo de EXCAPES es incentivar a los jóvenes a visitar aquellos lugares de México que aún no conocen y al mismo tiempo impulsar el desarrollo turístico y económico de los estados en los que se realiza el programa. Nuestro reto es captar el interés de los millennials que inconformes con los contenidos de la televisión abierta, prefieren consumir los productos audiovisuales por internet."
+solution: "EXCAPES involucra al espectador en la serie, dándole la posibilidad de interactuar con los viajeros, la posibilidad de ganarse un viaje y salir en los próximos  capítulos de EXCAPES. Esta interacción y la posibilidad de salir en la serie, generar una sensación de cercanía con el espectador permitiendo una relación estrecha entre EXCAPES y sus espectadores. Esta cercanía ayuda a generar sentimientos "
 display_1: "excapes1.jpg"
 display_2: "excapes1.jpg"
 ---

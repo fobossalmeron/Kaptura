@@ -1,8 +1,21 @@
 @include media-query($small-desktop){
 
+  section, .diagonalback, footer{
+    background-position: -10px center;
+    background-image: none !important;
+  }
+
+  .newmenu{
+    background-image:url(/images/layout/menumobile.svg);
+    opacity:1;
+    height: 140px;
+    width: 50px;
+  }
+
   .footer-contact li {
     width: 100%;
     border: none;
+    padding: 2% 0;
   }
   #nosotros .members{
        li{
@@ -48,14 +61,7 @@
       margin-top: 10%;
       font-size: 13px;
     }
-    .footer-contact li{
-    width: 100%;
-    padding: 2% 0;
-    }
-    .newmenu{
-      height: 140px;
-      width: 50px;
-    }
+
     .logopage{
       width: 75%;
     }
@@ -83,9 +89,7 @@
 }
 
 @include media-query($mobile){
-    section, .diagonalback, footer{
-      background-position: -10px center;
-    }
+
     .logopage{
       margin-top:20%;
     }
@@ -173,6 +177,10 @@
 }
 
 @include media-query($mini-mobile){
+
+    .footer-contact li p{
+      font-size: 1em;
+    }
 
     .display span {
         min-height: 200px;
