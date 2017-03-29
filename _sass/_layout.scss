@@ -202,7 +202,6 @@ header {
     box-sizing: border-box;
     background-color: rgba(252,252,252,0.95);
     @include transition(.4s, ease);
-    background-attachment: fixed;
     background-position: left center;
     background-repeat: no-repeat;
     background-size: 60px;
