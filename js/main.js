@@ -63,12 +63,14 @@ $(document).ready(function() {
     body.classList.remove('preventscroll');
     wrrapper.classList.remove('openbody');
     menuIcon.classList.remove('openbutton')
+    wrrapper.removeEventListener('touchstart', function(e){ e.preventDefault(); });
   };
 
   function toggleMenu(){
     allNav.classList.toggle('openmenu');
     menuIcon.classList.toggle('openbutton')
     body.classList.toggle('preventscroll');
+    wrrapper.addEventListener('touchstart', function(e){ e.preventDefault(); });
     wrrapper.classList.toggle('openbody');
   };
 
