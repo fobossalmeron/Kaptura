@@ -1,0 +1,9 @@
+prose:
+  rooturl: '_proyects'
+  siteurl: 'http://kapturaprojects.com'
+  media: 'images'
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
