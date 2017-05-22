@@ -22,4 +22,4 @@ display_1: transportarte2.jpg
 display_2: transportarte1.jpg
 published: true
 ---
-**TRANSPORTARTE** busca contribuir a que los usuarios comprendan la importancia del buen comportamiento cívico dentro de las instalaciones del **STC Metro**. El proyecto consiste en presentar actividades artísticas y de entretenimiento con mensajes, consejos y anécdotas de carácter cívico dentro de las instalaciones del Metro. El equipo de Kaptura Projects ha realizado más de 300 videos para Transportarte ademas de manejar las redes sociales del proyecto, logrando un alcance de más de 2 millones de usuarios..
+**TRANSPORTARTE** busca contribuir a que los usuarios comprendan la importancia del buen comportamiento cívico dentro de las instalaciones del **STC Metro**. El proyecto consiste en presentar actividades artísticas y de entretenimiento con mensajes, consejos y anécdotas de carácter cívico dentro de las instalaciones del Metro. El equipo de Kaptura Projects ha realizado más de 300 videos para Transportarte ademas de manejar las redes sociales del proyecto, logrando un alcance de más de 2 millones de usuarios.
