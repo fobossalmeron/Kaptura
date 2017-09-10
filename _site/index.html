@@ -8,7 +8,7 @@
   <title>Kaptura Projects</title>
   <meta name="description" content="Kaptura Projects es una productora de audiovisuales en la CDMX.">
 
-  <meta property="og:url" content="http://kapturaprojects.com/">
+  <meta property="og:url" content="http://localhost:4000/">
   <meta property="og:site_name" content="Kaptura Projects" />
   <meta property="og:type" content="website">
   <meta property="og:title" content="Kaptura Projects">
@@ -18,8 +18,8 @@
   <meta property="og:locale:alternate" content="es_ES" />
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://kapturaprojects.com//">
-  <link rel="alternate" type="application/rss+xml" title="Kaptura Projects" href="http://kapturaprojects.com//feed.xml">
+  <link rel="canonical" href="http://localhost:4000//">
+  <link rel="alternate" type="application/rss+xml" title="Kaptura Projects" href="http://localhost:4000//feed.xml">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
@@ -472,6 +472,94 @@
 
 	
 		<div class="proyect">
+      <img class="main_image" src="/images/portfolio/setratadeti/setratadeti.svg" />
+			<div class="main_title">
+			  <h3><b>PROD.</b> <a href="http://tratadeti.org/" target="_blank">La Danza de las Fieras</a></h3>
+        
+			  <h4><b>GÉNERO</b> Mixto. Documental</h4>
+        
+			  <h4><b>DURACIÓn</b> 90 minutos</h4>
+        
+			</div>
+      <div class="columned">
+        <div class="thecolumn"></div>
+        <p><strong>La Danza de las Fieras</strong> es una película realizada para ayudar a prevenir la trata de personas. La película está compuesta por seis cortometrajes, cada uno de los cuales tiene su propio director, propuesta narrativa y visual, dura aproximadamente 15 minutos y aborda un tema distinto de la trata de personas: explotación sexual infantil, explotación laboral en el campo, menores en la delincuencia organizada, albergues disfuncionales, los familiares de las víctimas e internet como medio de captación de víctimas.</p>
+
+      </div>
+      <div class="video_insert">
+			     <iframe src="https://player.vimeo.com/video/226767311" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+
+      <div id="setratadeti1" class="parallaxParent">
+        <img id="coverersetratadeti1" class="coverer above-minitablet" src="/images/layout/singlelinegrid.svg" />
+        <img id="coverersetratadeti1mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
+      	<div class="parallaxChild" style="background-image: url(/images/portfolio/setratadeti/setratadeti1.jpg);">
+        </div>
+      </div>
+
+      <script>
+        $( document ).ready(function() {
+          parallaxresize("setratadeti", 1);
+        });
+        $( window ).resize(function() {
+          parallaxresize("setratadeti", 1);
+        });
+      </script>
+      <div class="columnedbrief">
+        <div class="thecolumn"></div>
+  			<div class="brief">
+  				<h3>Objetivo</h3>
+  				<p>El objetivo de <b>La Danza de las Fieras</b> es la prevención de la trata de personas, por esta razón realizamos una película entretenida, que llama la atención, informa, conmueve e impacta a las víctimas potenciales, mostrando como detectar situaciones de peligro y tomar decisiones que los mantengan a salvo. Nuestra intención es proyectar esta película en salas de cine y en todas las secundarias y preparatorias de México. Nuestro reto es captar la atención de los adolescentes para concientizarlos sobre el tema y lo vulnerables que se encuentran.</p>
+  			</div>
+  			<div class="solution">
+  				<h3>Solución</h3>
+  				<p>La película tiene una duración total de 90 minutos, pero al dividirse en seis cortos de 15 minutos, las escuelas y los profesores tienen la facilidad de presentar cada uno de los cortos y temas por separado. Además cada corto será acompañado de material didáctico que servirá a los profesores de herramienta para guiar las reflexiones de los adolescentes.</p>
+  			</div>
+      </div>
+
+      
+      <div class="video_insert">
+			     <iframe src="https://www.youtube.com/embed/haTUwcsjBCY?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+      
+
+  <!--    <div id="setratadeti2" class="parallaxParent">
+        <img id="coverersetratadeti2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg">
+        <img id="coverersetratadeti2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg">
+      	<div class="parallaxChild" style="background-image: url(/images/portfolio/setratadeti/setratadeti2.jpg);"></div>
+      </div>
+
+      <script>
+      $( document ).ready(function() {
+        parallaxresize("setratadeti", 2);
+      });
+      $( window ).resize(function() {
+          parallaxresize("setratadeti", 2);
+      });
+    </script>-->
+
+      <script>
+      	// init controller
+      	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+      	// build scenes
+      	new ScrollMagic.Scene({triggerElement: "#setratadeti1"})
+      					.setTween("#setratadeti1 > div", {y: "100%", ease: Linear.easeNone})
+      		//		.addIndicators()
+      					.addTo(controller);
+      	new ScrollMagic.Scene({triggerElement: "#setratadeti2"})
+      					.setTween("#setratadeti2 > div", {y: "100%", ease: Linear.easeNone})
+      			//	.addIndicators()
+      					.addTo(controller);
+                /*
+      	new ScrollMagic.Scene({triggerElement: "#parallax3"})
+      					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+      					.addIndicators()
+      					.addTo(controller);*/
+      </script>
+
+			</div>
+	
+		<div class="proyect">
       <img class="main_image" src="/images/portfolio/excapes/excapes.svg" />
 			<div class="main_title">
 			  <h3><b>PROD.</b> Excapes</h3>
@@ -548,94 +636,6 @@
       					.addTo(controller);
       	new ScrollMagic.Scene({triggerElement: "#excapes2"})
       					.setTween("#excapes2 > div", {y: "100%", ease: Linear.easeNone})
-      			//	.addIndicators()
-      					.addTo(controller);
-                /*
-      	new ScrollMagic.Scene({triggerElement: "#parallax3"})
-      					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
-      					.addIndicators()
-      					.addTo(controller);*/
-      </script>
-
-			</div>
-	
-		<div class="proyect">
-      <img class="main_image" src="/images/portfolio/setratadeti/setratadeti.svg" />
-			<div class="main_title">
-			  <h3><b>PROD.</b> <a href="http://tratadeti.org/" target="_blank">Se Trata de Ti</a></h3>
-        
-			  <h4><b>GÉNERO</b> Documental</h4>
-        
-			  <h4><b>DURACIÓn</b> 90 minutos</h4>
-        
-			</div>
-      <div class="columned">
-        <div class="thecolumn"></div>
-        <p><strong>SE TRATA DE TI</strong> es una película realizada para ayudar a prevenir la trata de personas. La película está compuesta por seis cortometrajes, cada uno de los cuales tiene su propio director, propuesta narrativa y visual, dura aproximadamente 15 minutos y aborda un tema distinto de la trata de personas: explotación sexual infantil, explotación laboral en el campo, menores en la delincuencia organizada, albergues disfuncionales, los familiares de las víctimas e internet como medio de captación de víctimas.</p>
-
-      </div>
-      <div class="video_insert">
-			     <iframe src="https://www.youtube.com/embed/k3jBenDRneM?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-      </div>
-
-      <div id="setratadeti1" class="parallaxParent">
-        <img id="coverersetratadeti1" class="coverer above-minitablet" src="/images/layout/singlelinegrid.svg" />
-        <img id="coverersetratadeti1mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg" />
-      	<div class="parallaxChild" style="background-image: url(/images/portfolio/setratadeti/setratadeti1.jpg);">
-        </div>
-      </div>
-
-      <script>
-        $( document ).ready(function() {
-          parallaxresize("setratadeti", 1);
-        });
-        $( window ).resize(function() {
-          parallaxresize("setratadeti", 1);
-        });
-      </script>
-      <div class="columnedbrief">
-        <div class="thecolumn"></div>
-  			<div class="brief">
-  				<h3>Objetivo</h3>
-  				<p>El objetivo de <b>Se Trata De Ti</b> es la prevención de la trata de personas, por esta razón realizamos una película entretenida, que llama la atención, informa, conmueve e impacta a las víctimas potenciales, mostrando como detectar situaciones de peligro y tomar decisiones que los mantengan a salvo. Nuestra intención es proyectar esta película en salas de cine y en todas las secundarias y preparatorias de México. Nuestro reto es captar la atención de los adolescentes para concientizarlos sobre el tema y lo vulnerables que se encuentran.</p>
-  			</div>
-  			<div class="solution">
-  				<h3>Solución</h3>
-  				<p>La película tiene una duración total de 90 minutos, pero al dividirse en seis cortos de 15 minutos, las escuelas y los profesores tienen la facilidad de presentar cada uno de los cortos y temas por separado. Además cada corto será acompañado de material didáctico que servirá a los profesores de herramienta para guiar las reflexiones de los adolescentes.</p>
-  			</div>
-      </div>
-
-      
-      <div class="video_insert">
-			     <iframe src="https://www.youtube.com/embed/haTUwcsjBCY?rel=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-      </div>
-      
-
-  <!--    <div id="setratadeti2" class="parallaxParent">
-        <img id="coverersetratadeti2" class="coverer above-minitablet" src="/images/layout/doublelinegrid.svg">
-        <img id="coverersetratadeti2mob" class="coverer minitablet" src="/images/layout/singlelinegridminitablet.svg">
-      	<div class="parallaxChild" style="background-image: url(/images/portfolio/setratadeti/setratadeti2.jpg);"></div>
-      </div>
-
-      <script>
-      $( document ).ready(function() {
-        parallaxresize("setratadeti", 2);
-      });
-      $( window ).resize(function() {
-          parallaxresize("setratadeti", 2);
-      });
-    </script>-->
-
-      <script>
-      	// init controller
-      	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-      	// build scenes
-      	new ScrollMagic.Scene({triggerElement: "#setratadeti1"})
-      					.setTween("#setratadeti1 > div", {y: "100%", ease: Linear.easeNone})
-      		//		.addIndicators()
-      					.addTo(controller);
-      	new ScrollMagic.Scene({triggerElement: "#setratadeti2"})
-      					.setTween("#setratadeti2 > div", {y: "100%", ease: Linear.easeNone})
       			//	.addIndicators()
       					.addTo(controller);
                 /*
@@ -874,39 +874,6 @@
 	        <div class="social_blocklist">
             
 	          <a target="_blank" href="mailto:guillermo.mendiguren@gmail.com ">
-	          	<span class="social_icon_white"><svg class="social_icon email" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
-			<path fill="#141414" stroke="#FCFCFC" stroke-width="8" stroke-miterlimit="10" d="M181.362,58.392
-				c0-3.42-1.351-6.513-3.506-8.872c-0.035-0.046-0.045-0.1-0.079-0.149c-0.038-0.042-0.087-0.058-0.126-0.098
-				c-2.451-2.562-5.904-4.182-9.746-4.182H34.667c-3.843,0-7.294,1.621-9.751,4.184c-0.036,0.04-0.089,0.053-0.124,0.098
-				c-0.04,0.047-0.049,0.102-0.084,0.149c-2.149,2.359-3.5,5.449-3.5,8.869v78.395c0,3.501,1.407,6.667,3.654,9.048
-				c0.045,0.048,0.06,0.108,0.108,0.157c0.016,0.014,0.035,0.018,0.052,0.036c2.449,2.495,5.861,4.057,9.646,4.057h133.239
-				c3.786,0,7.199-1.562,9.645-4.062c0.019-0.014,0.04-0.018,0.056-0.031c0.045-0.049,0.06-0.105,0.102-0.153
-				c2.252-2.379,3.658-5.546,3.658-9.052L181.362,58.392L181.362,58.392z M128.943,93.444l46.155-38.269
-				c0.453,0.983,0.718,2.067,0.718,3.216v78.395c0,1.035-0.214,2.021-0.587,2.932L128.943,93.444z M167.906,50.574
-				c1.162,0,2.262,0.263,3.253,0.709l-69.874,57.937L31.409,51.284c0.998-0.444,2.096-0.709,3.256-0.709H167.906z M27.343,139.712
-				c-0.374-0.905-0.588-1.893-0.588-2.931v-78.39c0-1.149,0.268-2.233,0.72-3.216L73.63,93.444L27.343,139.712z M34.667,144.601
-				c-1.278,0-2.475-0.336-3.545-0.868l46.772-46.756l21.611,17.921c0.512,0.429,1.147,0.644,1.78,0.644
-				c0.633,0,1.269-0.215,1.78-0.644l21.61-17.921l46.771,46.756c-1.07,0.532-2.263,0.868-3.544,0.868H34.667L34.667,144.601z" />
-</svg>
-</span>
-	          </a>
-            
-            
-            
-            
-	        </div>
-		</li>
-		
-		<li>
-			<div class="display profilecard">
-				<span class="colorize" style="background-image:url(/images/members/genaro.png)"></span>
-				<span class="colorizephoto" style="background-image:url(/images/members/genaro.png)"></span>
-			</div>
-			<h3><b>Genaro</b> Peñalosa </h3>
-			<p>Guión y Edición</p>
-	        <div class="social_blocklist">
-            
-	          <a target="_blank" href="mailto:gynyudico@gmail.com ">
 	          	<span class="social_icon_white"><svg class="social_icon email" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
 			<path fill="#141414" stroke="#FCFCFC" stroke-width="8" stroke-miterlimit="10" d="M181.362,58.392
 				c0-3.42-1.351-6.513-3.506-8.872c-0.035-0.046-0.045-0.1-0.079-0.149c-0.038-0.042-0.087-0.058-0.126-0.098
