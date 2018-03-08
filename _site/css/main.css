@@ -620,6 +620,7 @@ h2 {
 .logopage {
   width: 90%;
   max-width: 360px;
+  overflow: visible;
   height: 60%;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -633,23 +634,23 @@ h2 {
 
 @keyframes blink {
   0% {
-    -webkit-transform: translateX(-20%);
-    -moz-transform: translateX(-20%);
-    -ms-transform: translateX(-20%);
-    -o-transform: translateX(-20%);
-    transform: translateX(-20%); }
+    -webkit-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
+    -ms-transform: translateX(-5%);
+    -o-transform: translateX(-5%);
+    transform: translateX(-5%); }
   50% {
-    -webkit-transform: translateX(20%);
-    -moz-transform: translateX(20%);
-    -ms-transform: translateX(20%);
-    -o-transform: translateX(20%);
-    transform: translateX(20%); }
+    -webkit-transform: translateX(5%);
+    -moz-transform: translateX(5%);
+    -ms-transform: translateX(5%);
+    -o-transform: translateX(5%);
+    transform: translateX(5%); }
   100% {
-    -webkit-transform: translateX(-20%);
-    -moz-transform: translateX(-20%);
-    -ms-transform: translateX(-20%);
-    -o-transform: translateX(-20%);
-    transform: translateX(-20%); } }
+    -webkit-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
+    -ms-transform: translateX(-5%);
+    -o-transform: translateX(-5%);
+    transform: translateX(-5%); } }
 @-moz-keyframes moz-blink {
   0% {
     -webkit-transform: translateX(-5%);
